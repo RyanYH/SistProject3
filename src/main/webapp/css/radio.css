@@ -1,0 +1,25 @@
+/*CEntrar los elementos*/
+@import url("http://fonts.googleapis.com/earlyaccess/hanna.css");
+.centrado{
+  height: auto;
+  width: 50%;
+  margin-right: auto;
+  margin-left: auto;
+  font-family: 'Hanna';
+}
+/*Cambiar el color de un radioButton con el atribuot id*/
+.radio input#optionsRadios2[type="radio"]:checked ~ .check{
+  background-color: #008080;
+}
+.radio input#optionsRadios2[type="radio"]:checked ~ .circle {
+    border-color: #008080;
+}
+.genre{
+	font-family: 'Hanna';
+}
+.genre1 {
+    font-family: 'Hanna';
+    position: absolute;
+    top: 430px;
+    color: white;
+}

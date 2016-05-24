@@ -1,0 +1,195 @@
+.fa, .search-select, .nav-search-container, .submit-container {
+  display: inline-block;
+  font-family: FontAwesome;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.fa-search:before, .nav-search-container:before {
+  content: "\f002";
+}
+
+.fa-angle-down:before, .search-select:before {
+  content: "\f107";
+}
+
+.fa-arrow-right:before, .submit-container:before {
+  content: "\f061";
+}
+
+
+
+
+
+.nav-search-container input:-moz-placeholder {
+  color: transparent;
+}
+
+.nav-search-container input::-webkit-input-placeholder {
+  color: transparent;
+}
+
+.nav-search-container {
+  margin: 0 auto;
+  display: inline-block;
+  margin-top: 100px;
+}
+
+input[type="search"] {
+  box-sizing: border-box;
+  border-radius: 0;
+  -webkit-appearance: none;
+}
+
+input:-moz-placeholder {
+  color: #999;
+}
+
+input::-webkit-input-placeholder {
+  color: #999;
+}
+
+input::-webkit-search-decoration,
+input::-webkit-search-cancel-button {
+  display: none;
+}
+
+.search-select {
+  display: inline-block;
+  position: relative;
+  margin-left: -85px;
+  height: 100%;
+  display: inline-block;
+  color: white;
+  border-radius: 0;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 200ms 200ms;
+}
+.search-select:before {
+  position: absolute;
+  right: 5px;
+  top: 4px;
+  font-weight: bold;
+}
+.focused .search-select {
+  visibility: inherit;
+  opacity: 1;
+}
+.search-select select {
+  -webkit-appearance: none;
+  outline: 0;
+  margin: 0;
+  border-radius: 0;
+  border: none;
+  background: transparent;
+  border-radius: 0px;
+  width: 80px;
+  cursor: pointer;
+  font-size: 10px;
+  text-align: center;
+  padding: 5px 10px;
+  padding-right: 15px;
+  border-left: 1.5px dashed white;
+  color: white;
+}
+
+option {
+  display: none;
+  position: absolute;
+  border-radius: 0;
+  top: 100%;
+  right: 0;
+  color: white;
+  left: 0;
+  z-index: 999;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.nav-search-container {
+    position: relative;
+    left: 0px;
+    top: 390px;
+    color: white;
+    text-align: left;
+    height: 20%;
+    z-index: 1;
+}
+.nav-search-container:before {
+  position: absolute;
+  top: .8em;
+  left: 1.2em;
+  font-size: 15px;
+}
+
+.search-input {
+  outline: none;
+  width: 0px;
+  color: transparent;
+  cursor: pointer;
+  border: none;
+  min-height: 43px;
+  font-size: 1.5em;
+  height: 100%;
+  -webkit-appearance: textfield;
+  box-sizing: border-box;
+  background-color: inherit;
+  border-right: 1px solid rgba(255, 255, 255, 0.4);
+  border-left: 1px solid rgba(255, 255, 255, 0.4);
+  padding: 8px 25px;
+  transition: all .2s, width .1s ease-in-out;
+  color: white;
+}
+.search-input:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+.focused .search-input {
+  width: 250px;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-color: white;
+  font-size: 15px;
+  box-shadow: none;
+  padding-right: 85px;
+  padding-left: 40px;
+  cursor: auto;
+}
+
+.submit-container {
+  display: inline-block;
+  height: 43px;
+  width: 36px;
+  position: absolute;
+  visibility: hidden;
+  transition: visibility 1ms;
+  box-shadow: none;
+  box-sizing: border-box;
+}
+.submit-container:before {
+  position: absolute;
+  top: 30%;
+  color: #443850;
+  left: 30%;
+  display: block;
+}
+.show-submit.focused .submit-container {
+  visibility: inherit;
+}
+.submit-container .submit {
+  height: 100%;
+  width: 0;
+  border-radius: 0;
+  text-indent: -999px;
+  background: white;
+  padding: 0;
+  border: none;
+  transition: width 200ms;
+}
+.show-submit .submit-container .submit {
+  width: 100%;
+  visibility: inherit;
+}
