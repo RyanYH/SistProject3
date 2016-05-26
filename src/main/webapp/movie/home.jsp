@@ -9,50 +9,18 @@
 <link href='https://fonts.googleapis.com/css?family=Old+Standard+TT' rel='stylesheet' type='text/css'>
 <link rel="stylesheet" href="css/normalize.css">
 <link rel="stylesheet" href="css/style.css">
-<link rel='stylesheet prefetch' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css'>
+
 <link rel='stylesheet prefetch' href='https://cdn.jsdelivr.net/bootstrap.material-design/0.5.8/css/bootstrap-material-design.min.css'>
 <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
 <link rel="stylesheet" href="css/wrapper.css">
 <link rel="stylesheet" href="css/radio.css">
 <link rel="stylesheet" href="css/search.css">
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
+<script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+<script src='https://cdn.jsdelivr.net/bootstrap.material-design/0.5.8/js/material.min.js'></script>
 </head>
 <body>
-	<nav role="navigation" class="nav_bar">
-	<div class="nav_logo">
-		<span>Site Logo</span>
-		<svg xmlns="http://www.w3.org/2000/svg"
-			xmlns:xlink="http://www.w3.org/1999/xlink" width="87" height="42"
-			viewbox="0 0 87 42"> <defs> <path id="a"
-			d="M-577-60H663v2000H-577z"></path> </defs> <clippath id="b"> <use
-			xlink:href="#a" overflow="visible"></use> </clippath> <g clip-path="url(#b)">
-		<defs> <path id="c"
-			d="M41.004 0C29.404 0 20 9.4 20 21c0 11.598 9.4 21 21.004 21h10.992C63.596 42 73 32.6 73 21 73 9.402 63.6 0 51.996 0H41.004z"></path>
-		</defs> <clippath id="d"> <use xlink:href="#c" overflow="visible"></use>
-		</clippath> <path clip-path="url(#d)" fill="none" stroke="#B0B3C4"
-			stroke-width="10" stroke-miterlimit="10"
-			d="M41.004 0C29.404 0 20 9.4 20 21c0 11.598 9.4 21 21.004 21h10.992C63.596 42 73 32.6 73 21 73 9.402 63.6 0 51.996 0H41.004z"></path>
-		</g> <g id="knife"> <defs> <path id="e"
-			d="M-577-60H663v2000H-577z"></path> </defs> <clippath id="f"> <use
-			xlink:href="#e" overflow="visible"></use> </clippath> <g clip-path="url(#f)">
-		<defs> <path id="g"
-			d="M85.323 5.945l-6.323 15 5.01 2.377s.762 9.735 1.012 12.623c.62 1.764 2.003.752 2.003 0v-30s-.78-1.957-1.702 0z"></path>
-		</defs> <clippath id="h"> <use xlink:href="#g" overflow="visible"></use>
-		</clippath> <path clip-path="url(#h)" fill-rule="evenodd" clip-rule="evenodd"
-			fill="#B0B3C4" d="M74 .075h18.025v41.85H74z"></path> </g> </g> <g id="fork">
-		<defs> <path id="i" d="M-577-60H663v2000H-577z"></path> </defs> <clippath
-			id="j"> <use xlink:href="#i" overflow="visible"></use> </clippath> <g
-			clip-path="url(#j)"> <defs> <path id="k"
-			d="M9.928 7h1.355l2.272 15-5.628 1.674V37c-.982 2.084-2 0-2 0V23.674L.3 22 2.572 7h1.355v13c1 1.45 2 0 2 0V7h2v13c.974 1.33 2 0 2 0V7z"></path>
-		</defs> <clippath id="l"> <use xlink:href="#k" overflow="visible"></use>
-		</clippath> <path clip-path="url(#l)" fill-rule="evenodd" clip-rule="evenodd"
-			fill="#B0B3C4" d="M-4.7 2h23.256v40.926H-4.7z"></path> </g> </g> </svg>
-	</div>
-	<div class="nav_toggle">
-		<span class="hamb_toggle"><span class="line line-1"></span><span
-			class="line line-2"></span><span class="line line-3"></span></span><span
-			class="toggle_name">MENU</span>
-	</div>
-	</nav>
+	
 	<div role="main" class="blocks_container">
 		<div class="nav_overlay">
 			<div class="fix_top">
@@ -97,13 +65,13 @@
 						</button>
 						</section> <section class="menu menu--off">
 
-						<div class="container">
+						<div calss="container">
 							<div class="centrado">
 								<h2 class="genre">장르별</h2>
 								<!-- Radio button por defecto ********-->
 								<div class="radio radio-primary">
 									<label> <input name="optionsRadios" id="optionsRadios1"
-										value="option1" checked="" type="radio"> 드라마
+										value="option1"  type="radio"> 드라마
 									</label>
 								</div>
 								<!-- Radio button de color ***********-->
@@ -113,63 +81,279 @@
 									</label>
 								</div>
 								<div class="radio radio-primary">
-									<label> <input name="optionsRadios" id="optionsRadios2"
+									<label> <input name="optionsRadios" id="optionsRadios3"
 										value="option3" type="radio"> 가족
 									</label>
 								</div>
 								<div class="radio radio-primary">
-									<label> <input name="optionsRadios" id="optionsRadios2"
+									<label> <input name="optionsRadios" id="optionsRadios4"
 										value="option4" type="radio"> 액션
 									</label>
 								</div>
 								<div class="radio radio-primary">
-									<label> <input name="optionsRadios" id="optionsRadios2"
+									<label> <input name="optionsRadios" id="optionsRadios5"
 										value="option5" type="radio"> 로맨스
 									</label>
 								</div>
 								<div class="radio radio-primary">
-									<label> <input name="optionsRadios" id="optionsRadios2"
+									<label> <input name="optionsRadios" id="optionsRadios6"
 										value="option6" type="radio"> 판타지
 									</label>
 								</div>
 								<div class="radio radio-primary">
-									<label> <input name="optionsRadios" id="optionsRadios2"
+									<label> <input name="optionsRadios" id="optionsRadios7"
 										value="option7" type="radio"> 스릴러
 									</label>
 								</div>
 								<div class="radio radio-primary">
-									<label> <input name="optionsRadios" id="optionsRadios2"
+									<label> <input name="optionsRadios" id="optionsRadios8"
 										value="option8" type="radio"> 코믹
 									</label>
 								</div>
 								<div class="radio radio-primary">
-									<label> <input name="optionsRadios" id="optionsRadios2"
+									<label> <input name="optionsRadios" id="optionsRadios9"
 										value="option9" type="radio"> 미스테리
 									</label>
 								</div>
 							</div>
+							
+							<div class="centrado1">
+								<h2 class="genre">감성별</h2>
+								<!-- Radio button por defecto ********-->
+								<div class="radio radio-primary">
+									<label> <input name="optionsRadios1" id="optionsRadios11"
+										value="option11" type="radio"> 로맨스
+									</label>
+								</div>
+								<!-- Radio button de color ***********-->
+								<div class="radio radio-primary">
+									<label> <input name="optionsRadios1" id="optionsRadios12"
+										value="option12" type="radio"> 슬픔
+									</label>
+								</div>
+								<div class="radio radio-primary">
+									<label> <input name="optionsRadios1" id="optionsRadios13"
+										value="option13" type="radio"> 재미
+									</label>
+								</div>
+								<div class="radio radio-primary">
+									<label> <input name="optionsRadios1" id="optionsRadios14"
+										value="option14" type="radio"> 공포
+									</label>
+								</div>
+								<div class="radio radio-primary">
+									<label> <input name="optionsRadios1" id="optionsRadios15"
+										value="option15" type="radio"> 액션
+									</label>
+								</div>
+							
+							</div>
+							
+							
+							<div class="centrado2" style="display: none">
+								<div class="radio radio-primary2">
+										<label> <input name="optionsRadios2" id="detailradio-21"
+											value="option21" checked="" type="radio"> 사랑
+										</label>
+								</div>
+								<div class="radio radio-primary2">
+										<label> <input name="optionsRadios2" id="detailradio-22"
+											value="option22" checked="" type="radio"> 행복
+										</label>
+								</div>
+								<div class="radio radio-primary2">
+										<label> <input name="optionsRadios2" id="detailradio-23"
+											value="option23" checked="" type="radio"> 감동
+										</label>
+								</div>
+								<div class="radio radio-primary2">
+										<label> <input name="optionsRadios2" id="detailradio-24"
+											value="option24" checked="" type="radio"> 순수
+										</label>
+								</div>
+								<div class="radio radio-primary2">
+										<label> <input name="optionsRadios2" id="detailradio-25"
+											value="option25" checked="" type="radio"> 힐링
+										</label>
+								</div>
+								<div class="radio radio-primary2">
+										<label> <input name="optionsRadios2" id="detailradio-26"
+											value="option26" checked="" type="radio"> 애정
+										</label>
+								</div>
+								<div class="radio radio-primary2">
+										<label> <input name="optionsRadios2" id="detailradio-27"
+											value="option27" checked="" type="radio"> 로맨틱
+										</label>
+								</div>
+							</div>
+							
+							
+							
+							<div class="centrado3" style="display: none">
+								<div class="radio radio-primary2">
+										<label> <input name="optionsRadios2" id="detailradio-31"
+											value="option31" checked="" type="radio"> 감성
+										</label>
+								</div>
+								<div class="radio radio-primary2">
+										<label> <input name="optionsRadios2" id="detailradio-32"
+											value="option32" checked="" type="radio"> 우울
+										</label>
+								</div>
+								<div class="radio radio-primary2">
+										<label> <input name="optionsRadios2" id="detailradio-33"
+											value="option33" checked="" type="radio"> 절망
+										</label>
+								</div>
+								<div class="radio radio-primary2">
+										<label> <input name="optionsRadios2" id="detailradio-34"
+											value="option34" checked="" type="radio"> 애잔
+										</label>
+								</div>
+								<div class="radio radio-primary2">
+										<label> <input name="optionsRadios2" id="detailradio-35"
+											value="option35" checked="" type="radio"> 아픔
+										</label>
+								</div>
+								<div class="radio radio-primary2">
+										<label> <input name="optionsRadios2" id="detailradio-36"
+											value="option36" checked="" type="radio"> 연민
+										</label>
+								</div>
+								<div class="radio radio-primary2">
+										<label> <input name="optionsRadios2" id="detailradio-37"
+											value="option37" checked="" type="radio"> 비극
+										</label>
+								</div>
+							</div>
+							
+							
+							<div class="centrado4" style="display: none">
+								<div class="radio radio-primary2">
+										<label> <input name="optionsRadios2" id="detailradio-41"
+											value="option41" checked="" type="radio"> 즐거움
+										</label>
+								</div>
+								<div class="radio radio-primary2">
+										<label> <input name="optionsRadios2" id="detailradio-42"
+											value="option42" checked="" type="radio"> 웃음
+										</label>
+								</div>
+								<div class="radio radio-primary2">
+										<label> <input name="optionsRadios2" id="detailradio-43"
+											value="option43" checked="" type="radio"> 유머
+										</label>
+								</div>
+								<div class="radio radio-primary2">
+										<label> <input name="optionsRadios2" id="detailradio-44"
+											value="option44" checked="" type="radio"> 개그
+										</label>
+								</div>
+								<div class="radio radio-primary2">
+										<label> <input name="optionsRadios2" id="detailradio-45"
+											value="option45" checked="" type="radio"> 코미디
+										</label>
+								</div>
+								<div class="radio radio-primary2">
+										<label> <input name="optionsRadios2" id="detailradio-46"
+											value="option46" checked="" type="radio"> 코믹
+										</label>
+								</div>
+								<div class="radio radio-primary2">
+										<label> <input name="optionsRadios2" id="detailradio-47"
+											value="option47" checked="" type="radio"> 일상
+										</label>
+								</div>
+							</div>
+							
+							
+							
+							<div class="centrado5" style="display: none">
+								<div class="radio radio-primary2">
+										<label> <input name="optionsRadios2" id="detailradio-51"
+											value="option51" checked="" type="radio"> 스릴
+										</label>
+								</div>
+								<div class="radio radio-primary2">
+										<label> <input name="optionsRadios2" id="detailradio-52"
+											value="option52" checked="" type="radio"> 소름
+										</label>
+								</div>
+								<div class="radio radio-primary2">
+										<label> <input name="optionsRadios2" id="detailradio-53"
+											value="option53" checked="" type="radio"> 긴장
+										</label>
+								</div>
+								<div class="radio radio-primary2">
+										<label> <input name="optionsRadios2" id="detailradio-54"
+											value="option54" checked="" type="radio"> 반전
+										</label>
+								</div>
+								<div class="radio radio-primary2">
+										<label> <input name="optionsRadios2" id="detailradio-55"
+											value="option55" checked="" type="radio"> 호러
+										</label>
+								</div>
+								<div class="radio radio-primary2">
+										<label> <input name="optionsRadios2" id="detailradio-56"
+											value="option56" checked="" type="radio"> 충격
+										</label>
+								</div>
+								<div class="radio radio-primary2">
+										<label> <input name="optionsRadios2" id="detailradio-57"
+											value="option57" checked="" type="radio"> 귀신
+										</label>
+								</div>
+							</div>
+							
+							
+							
+							<div class="centrado6" style="display: none">
+								<div class="radio radio-primary2">
+										<label> <input name="optionsRadios2" id="detailradio-61"
+											value="option61" checked="" type="radio"> 할리우드
+										</label>
+								</div>
+								<div class="radio radio-primary2">
+										<label> <input name="optionsRadios2" id="detailradio-62"
+											value="option62" checked="" type="radio"> 대박
+										</label>
+								</div>
+								<div class="radio radio-primary2">
+										<label> <input name="optionsRadios2" id="detailradio-63"
+											value="option63" checked="" type="radio"> 감탄
+										</label>
+								</div>
+								<div class="radio radio-primary2">
+										<label> <input name="optionsRadios2" id="detailradio-64"
+											value="option64" checked="" type="radio"> 연기력
+										</label>
+								</div>
+								<div class="radio radio-primary2">
+										<label> <input name="optionsRadios2" id="detailradio-65"
+											value="option65" checked="" type="radio"> 모험
+										</label>
+								</div>
+								<div class="radio radio-primary2">
+										<label> <input name="optionsRadios2" id="detailradio-66"
+											value="option66" checked="" type="radio"> 범죄
+										</label>
+								</div>
+								<div class="radio radio-primary2">
+										<label> <input name="optionsRadios2" id="detailradio-67"
+											value="option67" checked="" type="radio"> 스펙타클
+										</label>
+								</div>
+							</div>
 						</div>
-						</section> </section>
+								<div class="btn-total">
+									<input type="button" value="검색" id="btn-keep">	
+								</div>
+							</section> </section>
+						
 					</div>
-					<nav>
-					<h3 class="genre1">감독,배우검색</h3>
-					<div class="nav-search-container">
-					
-						<input type="search" name="q"
-							class="search-input ui-autocomplete-input" value="" accesskey="4"
-							autocomplete="off" placeholder="Search Site...">
-						<div class="search-select">
-							<select id="type">
-								<option value="">All Types</option>
-								<option value="director">감독</option>
-								<option value="actor">배우</option>
-							</select>
-						</div>
-						<div class="submit-container">
-							<input class="submit" type="submit" value="Submit">
-						</div>
-					</div>
-					</nav>
+		
 				</div>
 			</div>
 			<div class="b_half">
@@ -179,7 +363,8 @@
 					<div class="block_content">
 						<h2 class="genre">통계 그래프</h2>
 
-						<a href="graph.do"><button class="food_cta" style="margin-top: 180px;">Read More</button></a>
+						<button class="food_cta" style="margin-top: 180px;">Read
+							More</button>
 					</div>
 				</div>
 				<div class="small_block recipe" style="width: 620px;">
@@ -219,12 +404,8 @@
 		</div>
 	</div>
 	<footer role="contentinfo" class="footer">&copy; 2016 Movie Magazine</footer>
-<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
-<script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
-<script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js'></script>
-<script src='https://cdn.jsdelivr.net/bootstrap.material-design/0.5.8/js/material.min.js'></script>
-<script src="js/radio.js"></script>
 <script src="js/wrapper.js"></script>
+<script src="js/radio.js"></script>
 <script src="js/search.js"></script>
 <script src="js/index.js"></script>
 

@@ -1,11 +1,11 @@
 /*CEntrar los elementos*/
 @import url("http://fonts.googleapis.com/earlyaccess/hanna.css");
-.centrado{
-  height: auto;
-  width: 50%;
-  margin-right: auto;
-  margin-left: auto;
-  font-family: 'Hanna';
+.centrado {
+    height: auto;
+    width: 92%;
+    margin-right: auto;
+    margin-left: auto;
+    font-family: 'Hanna';
 }
 /*Cambiar el color de un radioButton con el atribuot id*/
 .radio input#optionsRadios2[type="radio"]:checked ~ .check{
@@ -22,4 +22,61 @@
     position: absolute;
     top: 430px;
     color: white;
+}
+.centrado1{
+  height: auto;
+  width: 92%;
+  margin-right: auto;
+  margin-left: auto;
+  font-family: 'Hanna';
+}
+.centrado2{
+  height: auto;
+  width: 92%;
+  margin-right: auto;
+  margin-left: auto;
+  font-family: 'Hanna';
+}
+.centrado3{
+  height: auto;
+  width: 50%;
+  margin-right: auto;
+  margin-left: auto;
+  font-family: 'Hanna';
+}
+.centrado4{
+  height: auto;
+  width: 50%;
+  margin-right: auto;
+  margin-left: auto;
+  font-family: 'Hanna';
+}
+.centrado5{
+  height: auto;
+  width: 50%;
+  margin-right: auto;
+  margin-left: auto;
+  font-family: 'Hanna';
+}
+.centrado6{
+  height: auto;
+  width: 50%;
+  margin-right: auto;
+  margin-left: auto;
+  font-family: 'Hanna';
+}
+
+
+#btn-keep {
+  text-decoration: none;
+  background: #CCC;
+  color: white;
+  padding: 14px 20px;
+  font-size: 16px;
+  border-radius: 6px;
+  top: 90px;
+  left: 450px;
+  position: relative;
+  margin-bottom: -17px;
+  font-family: 'Hanna';
 }

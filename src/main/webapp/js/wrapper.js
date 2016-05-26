@@ -23,3 +23,54 @@
     });
 
 })();
+
+$(function(){
+	$('#optionsRadios11').click(function(){
+	    $('.centrado2').slideToggle("slow");
+	    $(".centrado3").slideUp( 0, '');
+	    $(".centrado4").slideUp( 0, '');
+	    $(".centrado5").slideUp( 0, '');
+	    $(".centrado6").slideUp( 0, '');
+	    $(this).toggleClass("active");
+	});
+});
+$(function(){
+	$('#optionsRadios12').click(function(){
+	    $('.centrado3').slideToggle("slow");
+	    $(".centrado2").slideUp( 0, '');
+	    $(".centrado4").slideUp( 0, '');
+	    $(".centrado5").slideUp( 0, '');
+	    $(".centrado6").slideUp( 0, '');
+	    $(this).toggleClass("active");
+	});
+});
+$(function(){
+	$('#optionsRadios13').click(function(){
+	    $('.centrado4').slideToggle("slow");
+	    $(".centrado2").slideUp( 0, '');
+	    $(".centrado3").slideUp( 0, '');
+	    $(".centrado5").slideUp( 0, '');
+	    $(".centrado6").slideUp( 0, '');
+	    $(this).toggleClass("active");
+	});
+});
+$(function(){
+	$('#optionsRadios14').click(function(){
+	    $('.centrado5').slideToggle("slow");
+	    $(".centrado2").slideUp( 0, '');
+	    $(".centrado3").slideUp( 0, '');
+	    $(".centrado4").slideUp( 0, '');
+	    $(".centrado6").slideUp( 0, '');
+	    $(this).toggleClass("active");
+	});
+});
+$(function(){
+	$('#optionsRadios15').click(function(){
+	    $('.centrado6').slideToggle("slow");
+	    $(".centrado2").slideUp( 0, '');
+	    $(".centrado3").slideUp( 0, '');
+	    $(".centrado4").slideUp( 0, '');
+	    $(".centrado5").slideUp( 0, '');
+	    $(this).toggleClass("active");
+	});
+});

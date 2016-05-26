@@ -406,17 +406,18 @@ body {
           animation-delay: 0.65s;
 }
 .blocks_container {
-  width: 88%;
-  max-width: 1024px;
-  margin: 0 auto;
-  position: relative;
-  margin-bottom: 50px;
-  overflow: hidden;
-  background-color: #fff;
-  box-shadow: 0px 8px 21px 0px rgba(50,50,50,0.5);
-  min-height: 30vh;
-  -webkit-transition: all 0.3s ease;
-  transition: all 0.3s ease;
+    width: 88%;
+    top: 50px;
+    max-width: 1024px;
+    margin: 0 auto;
+    position: relative;
+    margin-bottom: 50px;
+    overflow: hidden;
+    background-color: #fff;
+    box-shadow: 0px 8px 21px 0px rgba(50,50,50,0.5);
+    min-height: 30vh;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
 }
 .blocks_container:before,
 .blocks_container:after {
