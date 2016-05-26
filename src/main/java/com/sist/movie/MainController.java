@@ -35,11 +35,28 @@ public class MainController {
 		model.addAttribute("boxOffice",boxList);
 		return "movie/home";
 	}
+
+	@RequestMapping("searchTitle.do")
+	public String searchTitle(String title,Model model){
+		System.out.println("contorller"+title);
+		List<RecommandVO> list = rdao.searchTitle(title);
+		model.addAttribute("list",list);
+		return "movie/list";
+	}
 	
 	@RequestMapping("graph.do")
 	public String graphPage(Model model){
 		List<RecommandVO> list = rdao.recommandAllData();
 		model.addAttribute("list", list);
 		return "movie/graph";
+
+	}
+	@RequestMapping("detail.do")
+	public String detail(int no,Model model){
+		System.out.println(no);
+		
+		RecommandVO vo = rdao.detailAllData(no);
+		model.addAttribute("vo",vo);
+		return "movie/detail";
 	}
 }

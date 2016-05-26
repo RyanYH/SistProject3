@@ -1,9 +1,9 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR" pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html>
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Insert title here</title>
 
 <link href='https://fonts.googleapis.com/css?family=Old+Standard+TT' rel='stylesheet' type='text/css'>
@@ -44,9 +44,9 @@
 			<div class="block_content">
 				<h2>A Modern Twist on a Classic</h2>
 				<h4>Eggs with avocado and salsa in a soft corn tortilla</h4>
-				<form class="search" action="">
-					<input type="search" placeholder="Search here..." required>
-					<button type="submit">Search</button>
+				<form class="search" action="searchTitle.do" method="post">
+					<input type="search" placeholder="Search here..." required id="searchTextInput" name="title">
+					<button type="submit" id="searchTextBtn">Search</button>
 				</form>
 
 
@@ -67,83 +67,83 @@
 
 						<div calss="container">
 							<div class="centrado">
-								<h2 class="genre">Àå¸£º°</h2>
+								<h2 class="genre">ìž¥ë¥´ë³„</h2>
 								<!-- Radio button por defecto ********-->
 								<div class="radio radio-primary">
 									<label> <input name="optionsRadios" id="optionsRadios1"
-										value="option1"  type="radio"> µå¶ó¸¶
+										value="option1"  type="radio"> ë“œë¼ë§ˆ
 									</label>
 								</div>
 								<!-- Radio button de color ***********-->
 								<div class="radio radio-primary">
 									<label> <input name="optionsRadios" id="optionsRadios2"
-										value="option2" type="radio"> °øÆ÷
+										value="option2" type="radio"> ê³µí¬
 									</label>
 								</div>
 								<div class="radio radio-primary">
 									<label> <input name="optionsRadios" id="optionsRadios3"
-										value="option3" type="radio"> °¡Á·
+										value="option3" type="radio"> ê°€ì¡±
 									</label>
 								</div>
 								<div class="radio radio-primary">
 									<label> <input name="optionsRadios" id="optionsRadios4"
-										value="option4" type="radio"> ¾×¼Ç
+										value="option4" type="radio"> ì•¡ì…˜
 									</label>
 								</div>
 								<div class="radio radio-primary">
 									<label> <input name="optionsRadios" id="optionsRadios5"
-										value="option5" type="radio"> ·Î¸Ç½º
+										value="option5" type="radio"> ë¡œë§¨ìŠ¤
 									</label>
 								</div>
 								<div class="radio radio-primary">
 									<label> <input name="optionsRadios" id="optionsRadios6"
-										value="option6" type="radio"> ÆÇÅ¸Áö
+										value="option6" type="radio"> íŒíƒ€ì§€
 									</label>
 								</div>
 								<div class="radio radio-primary">
 									<label> <input name="optionsRadios" id="optionsRadios7"
-										value="option7" type="radio"> ½º¸±·¯
+										value="option7" type="radio"> ìŠ¤ë¦´ëŸ¬
 									</label>
 								</div>
 								<div class="radio radio-primary">
 									<label> <input name="optionsRadios" id="optionsRadios8"
-										value="option8" type="radio"> ÄÚ¹Í
+										value="option8" type="radio"> ì½”ë¯¹
 									</label>
 								</div>
 								<div class="radio radio-primary">
 									<label> <input name="optionsRadios" id="optionsRadios9"
-										value="option9" type="radio"> ¹Ì½ºÅ×¸®
+										value="option9" type="radio"> ë¯¸ìŠ¤í…Œë¦¬
 									</label>
 								</div>
 							</div>
 							
 							<div class="centrado1">
-								<h2 class="genre">°¨¼ºº°</h2>
+								<h2 class="genre">ê°ì„±ë³„</h2>
 								<!-- Radio button por defecto ********-->
 								<div class="radio radio-primary">
 									<label> <input name="optionsRadios1" id="optionsRadios11"
-										value="option11" type="radio"> ·Î¸Ç½º
+										value="option11" type="radio"> ë¡œë§¨ìŠ¤
 									</label>
 								</div>
 								<!-- Radio button de color ***********-->
 								<div class="radio radio-primary">
 									<label> <input name="optionsRadios1" id="optionsRadios12"
-										value="option12" type="radio"> ½½ÇÄ
+										value="option12" type="radio"> ìŠ¬í””
 									</label>
 								</div>
 								<div class="radio radio-primary">
 									<label> <input name="optionsRadios1" id="optionsRadios13"
-										value="option13" type="radio"> Àç¹Ì
+										value="option13" type="radio"> ìž¬ë¯¸
 									</label>
 								</div>
 								<div class="radio radio-primary">
 									<label> <input name="optionsRadios1" id="optionsRadios14"
-										value="option14" type="radio"> °øÆ÷
+										value="option14" type="radio"> ê³µí¬
 									</label>
 								</div>
 								<div class="radio radio-primary">
 									<label> <input name="optionsRadios1" id="optionsRadios15"
-										value="option15" type="radio"> ¾×¼Ç
+										value="option15" type="radio"> ì•¡ì…˜
 									</label>
 								</div>
 							
@@ -153,37 +153,37 @@
 							<div class="centrado2" style="display: none">
 								<div class="radio radio-primary2">
 										<label> <input name="optionsRadios2" id="detailradio-21"
-											value="option21" checked="" type="radio"> »ç¶û
+											value="option21" checked="" type="radio"> ì‚¬ëž‘
 										</label>
 								</div>
 								<div class="radio radio-primary2">
 										<label> <input name="optionsRadios2" id="detailradio-22"
-											value="option22" checked="" type="radio"> Çàº¹
+											value="option22" checked="" type="radio"> í–‰ë³µ
 										</label>
 								</div>
 								<div class="radio radio-primary2">
 										<label> <input name="optionsRadios2" id="detailradio-23"
-											value="option23" checked="" type="radio"> °¨µ¿
+											value="option23" checked="" type="radio"> ê°ë™
 										</label>
 								</div>
 								<div class="radio radio-primary2">
 										<label> <input name="optionsRadios2" id="detailradio-24"
-											value="option24" checked="" type="radio"> ¼ø¼ö
+											value="option24" checked="" type="radio"> ìˆœìˆ˜
 										</label>
 								</div>
 								<div class="radio radio-primary2">
 										<label> <input name="optionsRadios2" id="detailradio-25"
-											value="option25" checked="" type="radio"> Èú¸µ
+											value="option25" checked="" type="radio"> ížë§
 										</label>
 								</div>
 								<div class="radio radio-primary2">
 										<label> <input name="optionsRadios2" id="detailradio-26"
-											value="option26" checked="" type="radio"> ¾ÖÁ¤
+											value="option26" checked="" type="radio"> ì• ì •
 										</label>
 								</div>
 								<div class="radio radio-primary2">
 										<label> <input name="optionsRadios2" id="detailradio-27"
-											value="option27" checked="" type="radio"> ·Î¸ÇÆ½
+											value="option27" checked="" type="radio"> ë¡œë§¨í‹±
 										</label>
 								</div>
 							</div>
@@ -193,37 +193,37 @@
 							<div class="centrado3" style="display: none">
 								<div class="radio radio-primary2">
 										<label> <input name="optionsRadios2" id="detailradio-31"
-											value="option31" checked="" type="radio"> °¨¼º
+											value="option31" checked="" type="radio"> ê°ì„±
 										</label>
 								</div>
 								<div class="radio radio-primary2">
 										<label> <input name="optionsRadios2" id="detailradio-32"
-											value="option32" checked="" type="radio"> ¿ì¿ï
+											value="option32" checked="" type="radio"> ìš°ìš¸
 										</label>
 								</div>
 								<div class="radio radio-primary2">
 										<label> <input name="optionsRadios2" id="detailradio-33"
-											value="option33" checked="" type="radio"> Àý¸Á
+											value="option33" checked="" type="radio"> ì ˆë§
 										</label>
 								</div>
 								<div class="radio radio-primary2">
 										<label> <input name="optionsRadios2" id="detailradio-34"
-											value="option34" checked="" type="radio"> ¾ÖÀÜ
+											value="option34" checked="" type="radio"> ì• ìž”
 										</label>
 								</div>
 								<div class="radio radio-primary2">
 										<label> <input name="optionsRadios2" id="detailradio-35"
-											value="option35" checked="" type="radio"> ¾ÆÇÄ
+											value="option35" checked="" type="radio"> ì•„í””
 										</label>
 								</div>
 								<div class="radio radio-primary2">
 										<label> <input name="optionsRadios2" id="detailradio-36"
-											value="option36" checked="" type="radio"> ¿¬¹Î
+											value="option36" checked="" type="radio"> ì—°ë¯¼
 										</label>
 								</div>
 								<div class="radio radio-primary2">
 										<label> <input name="optionsRadios2" id="detailradio-37"
-											value="option37" checked="" type="radio"> ºñ±Ø
+											value="option37" checked="" type="radio"> ë¹„ê·¹
 										</label>
 								</div>
 							</div>
@@ -232,37 +232,37 @@
 							<div class="centrado4" style="display: none">
 								<div class="radio radio-primary2">
 										<label> <input name="optionsRadios2" id="detailradio-41"
-											value="option41" checked="" type="radio"> Áñ°Å¿ò
+											value="option41" checked="" type="radio"> ì¦ê±°ì›€
 										</label>
 								</div>
 								<div class="radio radio-primary2">
 										<label> <input name="optionsRadios2" id="detailradio-42"
-											value="option42" checked="" type="radio"> ¿ôÀ½
+											value="option42" checked="" type="radio"> ì›ƒìŒ
 										</label>
 								</div>
 								<div class="radio radio-primary2">
 										<label> <input name="optionsRadios2" id="detailradio-43"
-											value="option43" checked="" type="radio"> À¯¸Ó
+											value="option43" checked="" type="radio"> ìœ ë¨¸
 										</label>
 								</div>
 								<div class="radio radio-primary2">
 										<label> <input name="optionsRadios2" id="detailradio-44"
-											value="option44" checked="" type="radio"> °³±×
+											value="option44" checked="" type="radio"> ê°œê·¸
 										</label>
 								</div>
 								<div class="radio radio-primary2">
 										<label> <input name="optionsRadios2" id="detailradio-45"
-											value="option45" checked="" type="radio"> ÄÚ¹Ìµð
+											value="option45" checked="" type="radio"> ì½”ë¯¸ë””
 										</label>
 								</div>
 								<div class="radio radio-primary2">
 										<label> <input name="optionsRadios2" id="detailradio-46"
-											value="option46" checked="" type="radio"> ÄÚ¹Í
+											value="option46" checked="" type="radio"> ì½”ë¯¹
 										</label>
 								</div>
 								<div class="radio radio-primary2">
 										<label> <input name="optionsRadios2" id="detailradio-47"
-											value="option47" checked="" type="radio"> ÀÏ»ó
+											value="option47" checked="" type="radio"> ì¼ìƒ
 										</label>
 								</div>
 							</div>
@@ -272,37 +272,37 @@
 							<div class="centrado5" style="display: none">
 								<div class="radio radio-primary2">
 										<label> <input name="optionsRadios2" id="detailradio-51"
-											value="option51" checked="" type="radio"> ½º¸±
+											value="option51" checked="" type="radio"> ìŠ¤ë¦´
 										</label>
 								</div>
 								<div class="radio radio-primary2">
 										<label> <input name="optionsRadios2" id="detailradio-52"
-											value="option52" checked="" type="radio"> ¼Ò¸§
+											value="option52" checked="" type="radio"> ì†Œë¦„
 										</label>
 								</div>
 								<div class="radio radio-primary2">
 										<label> <input name="optionsRadios2" id="detailradio-53"
-											value="option53" checked="" type="radio"> ±äÀå
+											value="option53" checked="" type="radio"> ê¸´ìž¥
 										</label>
 								</div>
 								<div class="radio radio-primary2">
 										<label> <input name="optionsRadios2" id="detailradio-54"
-											value="option54" checked="" type="radio"> ¹ÝÀü
+											value="option54" checked="" type="radio"> ë°˜ì „
 										</label>
 								</div>
 								<div class="radio radio-primary2">
 										<label> <input name="optionsRadios2" id="detailradio-55"
-											value="option55" checked="" type="radio"> È£·¯
+											value="option55" checked="" type="radio"> í˜¸ëŸ¬
 										</label>
 								</div>
 								<div class="radio radio-primary2">
 										<label> <input name="optionsRadios2" id="detailradio-56"
-											value="option56" checked="" type="radio"> Ãæ°Ý
+											value="option56" checked="" type="radio"> ì¶©ê²©
 										</label>
 								</div>
 								<div class="radio radio-primary2">
 										<label> <input name="optionsRadios2" id="detailradio-57"
-											value="option57" checked="" type="radio"> ±Í½Å
+											value="option57" checked="" type="radio"> ê·€ì‹ 
 										</label>
 								</div>
 							</div>
@@ -312,43 +312,43 @@
 							<div class="centrado6" style="display: none">
 								<div class="radio radio-primary2">
 										<label> <input name="optionsRadios2" id="detailradio-61"
-											value="option61" checked="" type="radio"> ÇÒ¸®¿ìµå
+											value="option61" checked="" type="radio"> í• ë¦¬ìš°ë“œ
 										</label>
 								</div>
 								<div class="radio radio-primary2">
 										<label> <input name="optionsRadios2" id="detailradio-62"
-											value="option62" checked="" type="radio"> ´ë¹Ú
+											value="option62" checked="" type="radio"> ëŒ€ë°•
 										</label>
 								</div>
 								<div class="radio radio-primary2">
 										<label> <input name="optionsRadios2" id="detailradio-63"
-											value="option63" checked="" type="radio"> °¨Åº
+											value="option63" checked="" type="radio"> ê°íƒ„
 										</label>
 								</div>
 								<div class="radio radio-primary2">
 										<label> <input name="optionsRadios2" id="detailradio-64"
-											value="option64" checked="" type="radio"> ¿¬±â·Â
+											value="option64" checked="" type="radio"> ì—°ê¸°ë ¥
 										</label>
 								</div>
 								<div class="radio radio-primary2">
 										<label> <input name="optionsRadios2" id="detailradio-65"
-											value="option65" checked="" type="radio"> ¸ðÇè
+											value="option65" checked="" type="radio"> ëª¨í—˜
 										</label>
 								</div>
 								<div class="radio radio-primary2">
 										<label> <input name="optionsRadios2" id="detailradio-66"
-											value="option66" checked="" type="radio"> ¹üÁË
+											value="option66" checked="" type="radio"> ë²”ì£„
 										</label>
 								</div>
 								<div class="radio radio-primary2">
 										<label> <input name="optionsRadios2" id="detailradio-67"
-											value="option67" checked="" type="radio"> ½ºÆåÅ¸Å¬
+											value="option67" checked="" type="radio"> ìŠ¤íŽ™íƒ€í´
 										</label>
 								</div>
 							</div>
 						</div>
 								<div class="btn-total">
-									<input type="button" value="°Ë»ö" id="btn-keep">	
+									<input type="button" value="ê²€ìƒ‰" id="btn-keep">	
 								</div>
 							</section> </section>
 						
@@ -361,7 +361,7 @@
 					style="background-image: url('https://images.unsplash.com/uploads/1413349410189e2a95d2e/39982a21?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&s=d4bd480137c8dd10d87051f6c33edbfc')"
 					class="medium_block peas">
 					<div class="block_content">
-						<h2 class="genre">Åë°è ±×·¡ÇÁ</h2>
+						<h2 class="genre">í†µê³„ ê·¸ëž˜í”„</h2>
 
 						<button class="food_cta" style="margin-top: 180px;">Read
 							More</button>
@@ -370,7 +370,7 @@
 				<div class="small_block recipe" style="width: 620px;">
 
 					<div class="recipe_container">
-						<h2> ½Å¼º±ÔÀÇ ¿À´ÃÀÇ ¿µÈ­ ÃßÃµ</h2>
+						<h2> ì‹ ì„±ê·œì˜ ì˜¤ëŠ˜ì˜ ì˜í™” ì¶”ì²œ</h2>
 						<p id="ssgRecommand">${todayRec}</p>
 						<!-- <input type="text" placeholder="http://www.cgv.co.kr/"
 							class="food_input" />
@@ -378,7 +378,7 @@
 							<input id="evidence" type="checkbox" checked="checked"
 								class="check_box" />
 						</div> -->
-						<button class="food_cta">»ó¼¼º¸±â</button>
+						<button class="food_cta">ìƒì„¸ë³´ê¸°</button>
 					</div>
 				</div>
 				<!-- <div class="small_block">
@@ -395,8 +395,8 @@
 				<div class="boxDiv">
 					<img src="${box.image}" width=100 height=150 border=0>
 					<p>${box.title}</p>
-					<font color="red"> ¿¹¸ÅÀ² &nbsp;</font>${box.percent}
-					<p>¢¾${box.like }</p>
+					<font color="red"> ì˜ˆë§¤ìœ¨ &nbsp;</font>${box.percent}
+					<p>â™¥${box.like }</p>
 					
 				</div>
 			</c:forEach>
