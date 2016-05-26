@@ -9,13 +9,18 @@ import com.sist.mongo.RecommandDAO;
 import com.sist.mongo.RecommandVO;
 
 import java.util.*;
+
+import javax.servlet.http.HttpServletRequest;
+
+import com.sist.dao.*;
 import com.sist.data.*;
 
 @Controller
 public class MainController {
 	@Autowired
 	private MovieDataManager mdm;
-	
+	@Autowired
+	private MovieDAO dao;
 	@Autowired
 	private RecommandDAO rdao;
 	
@@ -41,5 +46,16 @@ public class MainController {
 		List<RecommandVO> list = rdao.recommandAllData();
 		model.addAttribute("list", list);
 		return "movie/graph";
+	}
+	
+	@RequestMapping("movieCheck.do")
+	public String movieCheck(Model model,HttpServletRequest request) throws Exception{
+		request.setCharacterEncoding("utf-8");
+		String genre = request.getParameter("optionsRadios");
+		String feel = request.getParameter("optionsRadios2");
+		System.out.println("장르 : "+genre+"감성 : "+feel);
+		List<MovieVO> list = dao.movieCheck(genre, feel);
+		model.addAttribute("list", list);
+		return "movie/list";
 	}
 }

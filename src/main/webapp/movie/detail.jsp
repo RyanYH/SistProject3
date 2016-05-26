@@ -1,8 +1,8 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR" pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <!DOCTYPE>
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Insert title here</title>
 <link rel='stylesheet prefetch' href='http://cdn.rawgit.com/trazyn/neoui-ng/master/dist/neoui-0.1.0.min.css'>
 <link rel='stylesheet prefetch' href='http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css'>
@@ -40,16 +40,16 @@
 					<p>A team of explorers travel through a wormhole in space in an
 						attempt to ensure humanity's survival.</p>
 					<p class="director">
-						<b>°¨µ¶:</b> <a href="//www.imdb.com/name/nm0634240/?ref_=tt_ov_dr">Christopher
+						<b>ê°ë…:</b> <a href="//www.imdb.com/name/nm0634240/?ref_=tt_ov_dr">Christopher
 							Nolan</a>
 					</p>
 					<p class="writers">
-						<b>±Øº»:</b> <a href="//www.imdb.com/name/nm0634300/?ref_=tt_ov_wr">Jonathan
+						<b>ê·¹ë³¸:</b> <a href="//www.imdb.com/name/nm0634300/?ref_=tt_ov_wr">Jonathan
 							Nolan</a>, <a href="//www.imdb.com/name/nm0634240/?ref_=tt_ov_wr">Christopher
 							Nolan</a>
 					</p>
 					<p class="stars">
-						<b>¹è¿ì:</b> <a href="//www.imdb.com/name/nm0000190/?ref_=tt_ov_st">Matthew
+						<b>ë°°ìš°:</b> <a href="//www.imdb.com/name/nm0000190/?ref_=tt_ov_st">Matthew
 							McConaughey</a>, <a
 							href="//www.imdb.com/name/nm0004266/?ref_=tt_ov_st">Anne
 							Hathaway</a>, <a href="//www.imdb.com/name/nm1567113/?ref_=tt_ov_st">Jessica
@@ -68,7 +68,7 @@
 		</div>
 		<div class="content-back">
 			<ul id="newsul">
-					<li class="newsli">¸®ºäÀÔ´Ï´Ù</li>
+					<li class="newsli">ë¦¬ë·°ì…ë‹ˆë‹¤</li>
 			</ul>
 		</div>
 	</div>
