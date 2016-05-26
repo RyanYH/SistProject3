@@ -43,10 +43,14 @@ public class MainController {
 		
 		String data = "[";
 		
-		for(int i = 0; i < 15; i++){
+		for(int i = 0; i < list.size(); i++){
 			RecommandVO vo = list.get(i);
+			int gcount = vo.getGradeCount();
 			
-			data = data + "['"+vo.getTitle()+"',"+vo.getGrade()+"],";
+			if (gcount > 250000){
+				data = data + "['"+vo.getTitle()+"',"+vo.getGrade()+"],";
+			}
+
 		}
 		data = data.substring(0, data.lastIndexOf(","));
 		data = data + "]";
@@ -84,7 +88,7 @@ public class MainController {
        String data2 = "[";
 		
 		for(int i = 0; i < genre.length; i++){
-			data2 = data2 + "{name:'"+genre[i]+"',y:"+acount[i]+"},";
+			data2 = data2 + "{country:'"+genre[i]+"',litres:"+acount[i]+"},";
 		}
 		data2 = data2.substring(0, data2.lastIndexOf(","));
 		data2 = data2 + "]";
@@ -105,6 +109,7 @@ public class MainController {
 		}
 		data3 = data3.substring(0, data3.lastIndexOf(","));
 		data3 = data3 + "]";
+
 		
 		model.addAttribute("data1", data);
 		model.addAttribute("data2", data2);

@@ -363,8 +363,7 @@
 					<div class="block_content">
 						<h2 class="genre">통계 그래프</h2>
 
-						<button class="food_cta" style="margin-top: 180px;">Read
-							More</button>
+						<a href="graph.do"><button class="food_cta" style="margin-top: 180px;">Read More</button></a>
 					</div>
 				</div>
 				<div class="small_block recipe" style="width: 620px;">

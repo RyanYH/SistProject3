@@ -19,8 +19,11 @@
 <script src="http://code.jquery.com/jquery.js"></script>
 <script src="https://code.highcharts.com/highcharts.js"></script>
 <script src="https://code.highcharts.com/modules/exporting.js"></script>
+<script src="https://www.amcharts.com/lib/3/amcharts.js"></script>
+<script src="https://www.amcharts.com/lib/3/pie.js"></script>
+<script src="https://www.amcharts.com/lib/3/themes/light.js"></script>
 
-
+<link rel="stylesheet" href="http://fonts.googleapis.com/earlyaccess/hanna.css">
 <script>
 $(function () {
     $('#container1').highcharts({
@@ -28,7 +31,7 @@ $(function () {
             type: 'column'
         },
         title: {
-            text: 'Grade by movie top 10'
+            text: 'Grade by movie'
         },
         xAxis: {
             type: 'category',
@@ -60,35 +63,19 @@ $(function () {
         }]
     });
     
-    $('#container2').highcharts({
-        chart: {
-            plotBackgroundColor: null,
-            plotBorderWidth: null,
-            plotShadow: false,
-            type: 'pie'
-        },
-        title: {
-            text: 'Percentage by genre'
-        },
-        plotOptions: {
-            pie: {
-                allowPointSelect: true,
-                cursor: 'pointer',
-                dataLabels: {
-                    enabled: true,
-                    format: '<b>{point.name}</b>: {point.percentage:.1f} %',
-                    style: {
-                        color: (Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black'
-                    }
-                }
-            }
-        },
-        series: [{
-            name: 'count',
-            colorByPoint: true,
-            data: <%= request.getAttribute("data2")%>,
-        }]
-    });
+    var chart = AmCharts.makeChart( "chartdiv", {
+    	  "type": "pie",
+    	  "theme": "light",
+    	  "dataProvider": <%= request.getAttribute("data2")%>,
+    	  "valueField": "litres",
+    	  "titleField": "country",
+    	   "balloon":{
+    	   "fixedPosition":true
+    	  },
+    	  "export": {
+    	    "enabled": true
+    	  }
+    	} );
     
     $('#container3').highcharts({
         chart: {
@@ -154,44 +141,19 @@ $(function () {
         }]
     });
     
-    $('#container4').highcharts({
-        chart: {
-            type: 'column'
-        },
-        title: {
-            text: 'Stacked column chart'
-        },
-        xAxis: {
-            categories: ['Apples', 'Oranges', 'Pears', 'Grapes', 'Bananas']
-        },
-        yAxis: {
-            min: 0,
-            title: {
-                text: 'Total fruit consumption'
-            }
-        },
-        tooltip: {
-            pointFormat: '<span style="color:{series.color}">{series.name}</span>: <b>{point.y}</b> ({point.percentage:.0f}%)<br/>',
-            shared: true
-        },
-        plotOptions: {
-            column: {
-                stacking: 'percent'
-            }
-        },
-        series: [{
-            name: 'John',
-            data: [5, 3, 4, 7, 2]
-        }, {
-            name: 'Jane',
-            data: [2, 2, 3, 2, 1]
-        }, {
-            name: 'Joe',
-            data: [3, 4, 4, 2, 5]
-        }]
-    });
+ 
 });
 </script>
+
+<style>
+#chartdiv {
+	width		: 100%;
+	height		: 500px;
+	font-size	: 11px;
+	font-family: 'Hanna';
+	
+}					
+</style>
 </head>
 <body>
 	<div role="main" class="blocks_container">
@@ -202,7 +164,7 @@ $(function () {
 		<br><hr><br>
 		
 		<div class="big_block">
-			<div id="container2" style="width: width:80%; height: 400px;"></div>
+			<div id="chartdiv"></div>					
 		</div>
 		
 		<br><hr><br>
@@ -210,12 +172,7 @@ $(function () {
 		<div class="big_block">
 			<div id="container3" style="width: width:80%; height: 400px;"></div>
 		</div>
-		
-		<br><hr><br>
-		
-		<div class="big_block">
-			<div id="container4" style="width: width:80%; height: 400px;"></div>
-		</div>
+
 
 	</div>
 <footer role="contentinfo" class="footer">&copy; 2016 Movie Magazine</footer>

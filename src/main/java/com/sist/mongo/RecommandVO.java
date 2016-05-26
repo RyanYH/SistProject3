@@ -14,7 +14,14 @@ public class RecommandVO {
 	private double grade;
 	private String feel;
 	private String count;
+	private int gradeCount;
 	
+	public int getGradeCount() {
+		return gradeCount;
+	}
+	public void setGradeCount(int gradeCount) {
+		this.gradeCount = gradeCount;
+	}
 	public int getNo() {
 		return no;
 	}

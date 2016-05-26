@@ -41,6 +41,7 @@ public class RecommandDAO {
 				 vo.setRating(obj.getString("rating"));
 				 vo.setSynopsis(obj.getString("synopsis"));
 				 vo.setTime(obj.getString("time"));
+				 vo.setGradeCount(obj.getInt("gradecount"));
 				 
 				 list.add(vo);
 			 }
@@ -77,6 +78,7 @@ public class RecommandDAO {
 				 vo.setRating(obj.getString("rating"));
 				 vo.setSynopsis(obj.getString("synopsis"));
 				 vo.setTime(obj.getString("time"));
+				 vo.setGradeCount(obj.getInt("gradecount"));
 				 
 				 list.add(vo);
 			 }
