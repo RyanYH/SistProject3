@@ -20,17 +20,15 @@
 <script src="https://code.highcharts.com/highcharts.js"></script>
 <script src="https://code.highcharts.com/modules/exporting.js"></script>
 
+
 <script>
 $(function () {
-    $('#container').highcharts({
+    $('#container1').highcharts({
         chart: {
             type: 'column'
         },
         title: {
-            text: 'World\'s largest cities per 2014'
-        },
-        subtitle: {
-            text: 'Source: <a href="http://en.wikipedia.org/wiki/List_of_cities_proper_by_population">Wikipedia</a>'
+            text: 'Grade by movie top 10'
         },
         xAxis: {
             type: 'category',
@@ -45,41 +43,151 @@ $(function () {
         yAxis: {
             min: 0,
             title: {
-                text: 'Population (millions)'
+                text: ''
             }
         },
-        legend: {
-            enabled: false
-        },
-        tooltip: {
-            pointFormat: 'Population in 2008: <b>{point.y:.1f} millions</b>'
-        },
         series: [{
-            name: 'Population',
-            data: [
-                ['Shanghai', 23.7],
-                ['Lagos', 16.1],
-                ['Istanbul', 14.2],
-                ['Karachi', 14.0],
-                ['Mumbai', 12.5],
-                ['Moscow', 12.1],
-                ['São Paulo', 11.8],
-                ['Beijing', 11.7],
-                ['Guangzhou', 11.1],
-                ['Delhi', 11.1]
-            ],
+            name: 'grade',
+            data: <%= request.getAttribute("data1")%>,
             dataLabels: {
                 enabled: true,
                 rotation: -90,
                 color: '#FFFFFF',
                 align: 'right',
                 format: '{point.y:.1f}', 
-                y: 10, 
-                style: {
-                    fontSize: '13px',
-                    fontFamily: 'Verdana, sans-serif'
+                y: 10
+            }
+        }]
+    });
+    
+    $('#container2').highcharts({
+        chart: {
+            plotBackgroundColor: null,
+            plotBorderWidth: null,
+            plotShadow: false,
+            type: 'pie'
+        },
+        title: {
+            text: 'Percentage by genre'
+        },
+        plotOptions: {
+            pie: {
+                allowPointSelect: true,
+                cursor: 'pointer',
+                dataLabels: {
+                    enabled: true,
+                    format: '<b>{point.name}</b>: {point.percentage:.1f} %',
+                    style: {
+                        color: (Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black'
+                    }
                 }
             }
+        },
+        series: [{
+            name: 'count',
+            colorByPoint: true,
+            data: <%= request.getAttribute("data2")%>,
+        }]
+    });
+    
+    $('#container3').highcharts({
+        chart: {
+            type: 'scatter',
+            zoomType: 'xy'
+        },
+        title: {
+            text: 'grade by playdate'
+        },
+        xAxis: {
+            title: {
+                enabled: true,
+                text: 'playdate'
+            },
+            startOnTick: true,
+            endOnTick: true,
+            showLastLabel: true
+        },
+        yAxis: {
+            title: {
+                text: 'grade'
+            }
+        },
+        legend: {
+            layout: 'vertical',
+            align: 'left',
+            verticalAlign: 'top',
+            x: 100,
+            y: 70,
+            floating: true,
+            backgroundColor: (Highcharts.theme && Highcharts.theme.legendBackgroundColor) || '#FFFFFF',
+            borderWidth: 1
+        },
+        plotOptions: {
+            scatter: {
+                marker: {
+                    radius: 5,
+                    states: {
+                        hover: {
+                            enabled: true,
+                            lineColor: 'rgb(100,100,100)'
+                        }
+                    }
+                },
+                states: {
+                    hover: {
+                        marker: {
+                            enabled: false
+                        }
+                    }
+                },
+                tooltip: {
+                    headerFormat: '<b>{series.name}</b><br>',
+                    pointFormat: '{point.x} year, {point.y} grade'
+                }
+            }
+        },
+        series: [{
+            name: 'movie',
+            color: 'rgba(223, 83, 83, .5)',
+            data: <%= request.getAttribute("data3")%>
+
+        }]
+    });
+    
+    $('#container4').highcharts({
+        chart: {
+            type: 'column'
+        },
+        title: {
+            text: 'Stacked column chart'
+        },
+        xAxis: {
+            categories: ['Apples', 'Oranges', 'Pears', 'Grapes', 'Bananas']
+        },
+        yAxis: {
+            min: 0,
+            title: {
+                text: 'Total fruit consumption'
+            }
+        },
+        tooltip: {
+            pointFormat: '<span style="color:{series.color}">{series.name}</span>: <b>{point.y}</b> ({point.percentage:.0f}%)<br/>',
+            shared: true
+        },
+        plotOptions: {
+            column: {
+                stacking: 'percent'
+            }
+        },
+        series: [{
+            name: 'John',
+            data: [5, 3, 4, 7, 2]
+        }, {
+            name: 'Jane',
+            data: [2, 2, 3, 2, 1]
+        }, {
+            name: 'Joe',
+            data: [3, 4, 4, 2, 5]
         }]
     });
 });
@@ -88,16 +196,31 @@ $(function () {
 <body>
 	<div role="main" class="blocks_container">
 		<div class="big_block">
-			<div class="block_content">
-				<div id="container" style="min-width: 300px; height: 400px; margin: 0 auto"></div>
-			</div>
+			<div id="container1" style="width: width:80%; height: 400px;"></div>
+		</div>
+		
+		<br><hr><br>
+		
+		<div class="big_block">
+			<div id="container2" style="width: width:80%; height: 400px;"></div>
+		</div>
+		
+		<br><hr><br>
+		
+		<div class="big_block">
+			<div id="container3" style="width: width:80%; height: 400px;"></div>
+		</div>
+		
+		<br><hr><br>
+		
+		<div class="big_block">
+			<div id="container4" style="width: width:80%; height: 400px;"></div>
 		</div>
 
 	</div>
 <footer role="contentinfo" class="footer">&copy; 2016 Movie Magazine</footer>
 
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
-<script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
 <script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js'></script>
 <script src='https://cdn.jsdelivr.net/bootstrap.material-design/0.5.8/js/material.min.js'></script>
 
