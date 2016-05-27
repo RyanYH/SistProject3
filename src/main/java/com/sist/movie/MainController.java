@@ -8,13 +8,16 @@ import com.sist.data.MovieDataManager;
 import com.sist.mongo.RecommandDAO;
 import com.sist.mongo.RecommandVO;
 import java.util.*;
+
+import javax.servlet.http.HttpServletRequest;
+
+import com.sist.dao.*;
 import com.sist.data.*;
 
 @Controller
 public class MainController {
 	@Autowired
 	private MovieDataManager mdm;
-	
 	@Autowired
 	private RecommandDAO rdao;
 	
@@ -132,5 +135,13 @@ public class MainController {
 		RecommandVO vo = rdao.detailAllData(no);
 		model.addAttribute("vo",vo);
 		return "movie/detail";
+	}
+	
+	@RequestMapping("movieCheck.do")
+	public String movieCheck(Model model,String optionsRadios,String optionsRadios2){
+		System.out.println("장르 : "+optionsRadios+"감성 : "+optionsRadios2);
+		List<RecommandVO> list = rdao.movieCheck(optionsRadios, optionsRadios2);
+		model.addAttribute("list", list);
+		return "movie/list";
 	}
 }
