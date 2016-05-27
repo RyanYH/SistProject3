@@ -1,8 +1,8 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR" pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <!DOCTYPE>
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Insert title here</title>
 <link rel='stylesheet prefetch' href='http://cdn.rawgit.com/trazyn/neoui-ng/master/dist/neoui-0.1.0.min.css'>
 <link rel='stylesheet prefetch' href='http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css'>
@@ -14,12 +14,12 @@
 			<div class="cover">
 				<div class="skew">
 					<img
-						src="//image.tianjimedia.com/uploadImages/2014/307/16/B64L7138TZN2.jpg">
+						src="https://images.unsplash.com/photo-1429595518497-e7e060d84f7d?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&s=833be352b819594acd95b997fe6a4693">
 
 					<div class="meta">
-						<p class="subhead">Interstellar (2014)</p>
+						<p class="subhead">${vo.title} </p>
 						<p>
-							<span>PG-13</span> <span>169 min</span> <span>8.7</span>
+							<span>${vo.rating}</span> <span>${vo.time}</span> <span>${vo.grade}</span>
 						</p>
 						<s-rate ng-model="rate" ng-init="rate = 4.4"></s-rate>
 						<span> <i class="md-icon-favorite"></i> 740,216 likes
@@ -31,44 +31,39 @@
 				<div class="preview">
 					<div class="min">
 						<img
-							src="//www.moviesnet.nl/images/filmnieuws/2014/1410889036/interstellar.jpg">
+							src="${vo.poster}">
 
 					</div>
 				</div>
 
 				<div class="desc">
-					<p>A team of explorers travel through a wormhole in space in an
-						attempt to ensure humanity's survival.</p>
 					<p class="director">
-						<b>∞®µ∂:</b> <a href="//www.imdb.com/name/nm0634240/?ref_=tt_ov_dr">Christopher
-							Nolan</a>
-					</p>
-					<p class="writers">
-						<b>±ÿ∫ª:</b> <a href="//www.imdb.com/name/nm0634300/?ref_=tt_ov_wr">Jonathan
-							Nolan</a>, <a href="//www.imdb.com/name/nm0634240/?ref_=tt_ov_wr">Christopher
-							Nolan</a>
+						<b>Í∞êÎèÖ:</b>${vo.director}
 					</p>
 					<p class="stars">
-						<b>πËøÏ:</b> <a href="//www.imdb.com/name/nm0000190/?ref_=tt_ov_st">Matthew
-							McConaughey</a>, <a
-							href="//www.imdb.com/name/nm0004266/?ref_=tt_ov_st">Anne
-							Hathaway</a>, <a href="//www.imdb.com/name/nm1567113/?ref_=tt_ov_st">Jessica
-							Chastain</a> | <a
-							href="//www.imdb.com/title/tt0816692/fullcredits?ref_=tt_ov_st_sm">See
-							full cast and crew</a>
-					<div class="action">
+						<b>Î∞∞Ïö∞:</b> ${vo.actor}
+					</p>
+					<p>${vo.synopsis}</p>
+
+					<!-- <p class="writers">
+						<b>Í∑πÎ≥∏:</b> <a href="//www.imdb.com/name/nm0634300/?ref_=tt_ov_wr">Jonathan
+							Nolan</a>, <a href="//www.imdb.com/name/nm0634240/?ref_=tt_ov_wr">Christopher
+							Nolan</a>
+					</p> -->
+							
+					<!-- <div class="action">
 						<button class="md-btn md-btn-mint">
 							<i class="md-icon-add"></i> Watchlist
 						</button>
 
 						<button class="md-btn md-btn-coral">Watch Trailer</button>
-					</div>
+					</div> -->
 				</div>
 			</div>
 		</div>
 		<div class="content-back">
 			<ul id="newsul">
-					<li class="newsli">∏Æ∫‰¿‘¥œ¥Ÿ</li>
+					<li class="newsli">Î¶¨Î∑∞ÏûÖÎãàÎã§</li>
 			</ul>
 		</div>
 	</div>
