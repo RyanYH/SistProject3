@@ -1,9 +1,9 @@
-package com.sist.mongo;
+package com.sist.dao;
 
-public class RecommandVO {
+public class MovieVO {
 	private int no;
 	private String title;
-	private String rating;
+	private String rating; 
 	private String poster;
 	private String director;
 	private String actor;
@@ -21,6 +21,18 @@ public class RecommandVO {
 	}
 	public void setGradeCount(int gradeCount) {
 		this.gradeCount = gradeCount;
+	}
+	public String getFeel() {
+		return feel;
+	}
+	public void setFeel(String feel) {
+		this.feel = feel;
+	}
+	public String getCount() {
+		return count;
+	}
+	public void setCount(String count) {
+		this.count = count;
 	}
 	public int getNo() {
 		return no;
@@ -87,17 +99,5 @@ public class RecommandVO {
 	}
 	public void setGrade(double grade) {
 		this.grade = grade;
-	}
-	public String getFeel() {
-		return feel;
-	}
-	public void setFeel(String feel) {
-		this.feel = feel;
-	}
-	public String getCount() {
-		return count;
-	}
-	public void setCount(String count) {
-		this.count = count;
 	}
 }

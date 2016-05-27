@@ -17,20 +17,49 @@ $(function(){
 </head>
 <body>
 	<ul id="portfolio-list">
-		<c:forEach var="vo" items="${list}">
-		
+	  <c:forEach var="vo" items="${list}">
 		<li class="item video">
 			<div class="item-body">
-			<form action="detail.do" method="post" class="listFrm">
+			<form action="detail.do?no=${vo.no}" method="post" class="listFrm">
 				<div class="item-image">
 					<img
 						src="${vo.poster}"
 						alt="veteran memories project documentary screenshot" />
 					<p id="title">${vo.title}</p>
 					<p id="actor">출연:${vo.actor}</p>
-					<p id="total">감독:${vo.director}</p>
-					<p id="grade">등급:${vo.rating}</p>
-					<input type="hidden" value="${vo.no}" name="no"/>
+					<p id="grade">평점:${vo.grade}점</p>
+					<p id="rat">등급:${vo.rating}</p>
+					<article class="review review-1">
+                  <c:if test="${vo.grade<=2}">
+                  <span class="ratings one"></span>
+                  </c:if>
+                  <c:if test="${vo.grade==3}">
+                  <span class="ratings onehalf"></span>
+                  </c:if>
+                  <c:if test="${vo.grade==4}">
+                  <span class="ratings two"></span>
+                  </c:if>
+                  <c:if test="${vo.grade==5}">
+                  <span class="ratings twohalf"></span>
+                  </c:if>
+                  <c:if test="${vo.grade==6}">
+                  <span class="ratings three"></span>
+                  </c:if>
+                  <c:if test="${vo.grade==7}">
+                  <span class="ratings threehalf"></span>
+                  </c:if>
+                  <c:if test="${vo.grade==8}">
+                  <span class="ratings four"></span>
+                  </c:if>
+                  <c:if test="${vo.grade==9}">
+                  <span class="ratings fourhalf"></span>
+                  </c:if>
+                  <c:if test="${vo.grade==10}">
+                  <span class="ratings"></span>
+                  </c:if>
+                  
+               	</article>
+					
 				</div>
 				<div class="item-content">
 					<h5>${vo.title}</h5>
@@ -43,7 +72,6 @@ $(function(){
 		</li>
 		
 		</c:forEach>
-
 	</ul>
 
 

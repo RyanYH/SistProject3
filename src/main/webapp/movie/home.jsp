@@ -64,55 +64,55 @@
 							<span class="material-design-hamburger__layer"></span>
 						</button>
 						</section> <section class="menu menu--off">
-
+						<form action="movieCheck.do" method="post">
 						<div calss="container">
 							<div class="centrado">
 								<h2 class="genre">장르별</h2>
 								<!-- Radio button por defecto ********-->
 								<div class="radio radio-primary">
 									<label> <input name="optionsRadios" id="optionsRadios1"
-										value="option1"  type="radio"> 드라마
+										value="드라마"  type="radio"> 드라마
 									</label>
 								</div>
 								<!-- Radio button de color ***********-->
 								<div class="radio radio-primary">
 									<label> <input name="optionsRadios" id="optionsRadios2"
-										value="option2" type="radio"> 공포
+										value="공포" type="radio"> 공포
 									</label>
 								</div>
 								<div class="radio radio-primary">
 									<label> <input name="optionsRadios" id="optionsRadios3"
-										value="option3" type="radio"> 가족
+										value="가족" type="radio"> 가족
 									</label>
 								</div>
 								<div class="radio radio-primary">
 									<label> <input name="optionsRadios" id="optionsRadios4"
-										value="option4" type="radio"> 액션
+										value="액션" type="radio"> 액션
 									</label>
 								</div>
 								<div class="radio radio-primary">
 									<label> <input name="optionsRadios" id="optionsRadios5"
-										value="option5" type="radio"> 로맨스
+										value="로맨스" type="radio"> 로맨스
 									</label>
 								</div>
 								<div class="radio radio-primary">
 									<label> <input name="optionsRadios" id="optionsRadios6"
-										value="option6" type="radio"> 판타지
+										value="판타지" type="radio"> 판타지
 									</label>
 								</div>
 								<div class="radio radio-primary">
 									<label> <input name="optionsRadios" id="optionsRadios7"
-										value="option7" type="radio"> 스릴러
+										value="스릴러" type="radio"> 스릴러
 									</label>
 								</div>
 								<div class="radio radio-primary">
 									<label> <input name="optionsRadios" id="optionsRadios8"
-										value="option8" type="radio"> 코믹
+										value="코믹" type="radio"> 코믹
 									</label>
 								</div>
 								<div class="radio radio-primary">
 									<label> <input name="optionsRadios" id="optionsRadios9"
-										value="option9" type="radio"> 미스테리
+										value="미스테리" type="radio"> 미스테리
 									</label>
 								</div>
 							</div>
@@ -122,28 +122,29 @@
 								<!-- Radio button por defecto ********-->
 								<div class="radio radio-primary">
 									<label> <input name="optionsRadios1" id="optionsRadios11"
-										value="option11" type="radio"> 로맨스
+										value="로맨스" type="radio"> 로맨스
 									</label>
 								</div>
 								<!-- Radio button de color ***********-->
 								<div class="radio radio-primary">
 									<label> <input name="optionsRadios1" id="optionsRadios12"
-										value="option12" type="radio"> 슬픔
+										value="슬픔" type="radio"> 슬픔
 									</label>
 								</div>
 								<div class="radio radio-primary">
 									<label> <input name="optionsRadios1" id="optionsRadios13"
-										value="option13" type="radio"> 재미
+										value="재미" type="radio"> 재미
+
 									</label>
 								</div>
 								<div class="radio radio-primary">
 									<label> <input name="optionsRadios1" id="optionsRadios14"
-										value="option14" type="radio"> 공포
+										value="공포" type="radio"> 공포
 									</label>
 								</div>
 								<div class="radio radio-primary">
 									<label> <input name="optionsRadios1" id="optionsRadios15"
-										value="option15" type="radio"> 액션
+										value="액션" type="radio"> 액션
 									</label>
 								</div>
 							
@@ -153,37 +154,37 @@
 							<div class="centrado2" style="display: none">
 								<div class="radio radio-primary2">
 										<label> <input name="optionsRadios2" id="detailradio-21"
-											value="option21" checked="" type="radio"> 사랑
+											value="사랑" type="radio"> 사랑
 										</label>
 								</div>
 								<div class="radio radio-primary2">
 										<label> <input name="optionsRadios2" id="detailradio-22"
-											value="option22" checked="" type="radio"> 행복
+											value="행복"  type="radio"> 행복
 										</label>
 								</div>
 								<div class="radio radio-primary2">
 										<label> <input name="optionsRadios2" id="detailradio-23"
-											value="option23" checked="" type="radio"> 감동
+											value="감동" type="radio"> 감동
 										</label>
 								</div>
 								<div class="radio radio-primary2">
 										<label> <input name="optionsRadios2" id="detailradio-24"
-											value="option24" checked="" type="radio"> 순수
+											value="순수"  type="radio"> 순수
 										</label>
 								</div>
 								<div class="radio radio-primary2">
 										<label> <input name="optionsRadios2" id="detailradio-25"
-											value="option25" checked="" type="radio"> 힐링
+											value="힐링" type="radio"> 힐링
 										</label>
 								</div>
 								<div class="radio radio-primary2">
 										<label> <input name="optionsRadios2" id="detailradio-26"
-											value="option26" checked="" type="radio"> 애정
+											value="애정"  type="radio"> 애정
 										</label>
 								</div>
 								<div class="radio radio-primary2">
 										<label> <input name="optionsRadios2" id="detailradio-27"
-											value="option27" checked="" type="radio"> 로맨틱
+											value="로맨틱"  type="radio"> 로맨틱
 										</label>
 								</div>
 							</div>
@@ -193,37 +194,37 @@
 							<div class="centrado3" style="display: none">
 								<div class="radio radio-primary2">
 										<label> <input name="optionsRadios2" id="detailradio-31"
-											value="option31" checked="" type="radio"> 감성
+											value="감성"type="radio"> 감성
 										</label>
 								</div>
 								<div class="radio radio-primary2">
 										<label> <input name="optionsRadios2" id="detailradio-32"
-											value="option32" checked="" type="radio"> 우울
+											value="우울" type="radio"> 우울
 										</label>
 								</div>
 								<div class="radio radio-primary2">
 										<label> <input name="optionsRadios2" id="detailradio-33"
-											value="option33" checked="" type="radio"> 절망
+											value="절망" type="radio"> 절망
 										</label>
 								</div>
 								<div class="radio radio-primary2">
 										<label> <input name="optionsRadios2" id="detailradio-34"
-											value="option34" checked="" type="radio"> 애잔
+											value="애잔"  type="radio"> 애잔
 										</label>
 								</div>
 								<div class="radio radio-primary2">
 										<label> <input name="optionsRadios2" id="detailradio-35"
-											value="option35" checked="" type="radio"> 아픔
+											value="아픔"  type="radio"> 아픔
 										</label>
 								</div>
 								<div class="radio radio-primary2">
 										<label> <input name="optionsRadios2" id="detailradio-36"
-											value="option36" checked="" type="radio"> 연민
+											value="연민" type="radio"> 연민
 										</label>
 								</div>
 								<div class="radio radio-primary2">
 										<label> <input name="optionsRadios2" id="detailradio-37"
-											value="option37" checked="" type="radio"> 비극
+											value="비극" type="radio"> 비극
 										</label>
 								</div>
 							</div>
@@ -232,77 +233,80 @@
 							<div class="centrado4" style="display: none">
 								<div class="radio radio-primary2">
 										<label> <input name="optionsRadios2" id="detailradio-41"
-											value="option41" checked="" type="radio"> 즐거움
+											value="즐거움" type="radio"> 즐거움
 										</label>
 								</div>
 								<div class="radio radio-primary2">
 										<label> <input name="optionsRadios2" id="detailradio-42"
-											value="option42" checked="" type="radio"> 웃음
+											value="웃음" type="radio"> 웃음
 										</label>
 								</div>
 								<div class="radio radio-primary2">
 										<label> <input name="optionsRadios2" id="detailradio-43"
-											value="option43" checked="" type="radio"> 유머
+											value="유머" type="radio"> 유머
 										</label>
 								</div>
 								<div class="radio radio-primary2">
 										<label> <input name="optionsRadios2" id="detailradio-44"
-											value="option44" checked="" type="radio"> 개그
+											value="개그"  type="radio"> 개그
 										</label>
 								</div>
 								<div class="radio radio-primary2">
 										<label> <input name="optionsRadios2" id="detailradio-45"
-											value="option45" checked="" type="radio"> 코미디
+											value="코미디"  type="radio"> 코미디
 										</label>
 								</div>
 								<div class="radio radio-primary2">
 										<label> <input name="optionsRadios2" id="detailradio-46"
-											value="option46" checked="" type="radio"> 코믹
+											value="코믹"  type="radio"> 코믹
 										</label>
 								</div>
 								<div class="radio radio-primary2">
 										<label> <input name="optionsRadios2" id="detailradio-47"
-											value="option47" checked="" type="radio"> 일상
+											value="일상"  type="radio"> 일상
 										</label>
 								</div>
 							</div>
 							
-							
-							
 							<div class="centrado5" style="display: none">
 								<div class="radio radio-primary2">
 										<label> <input name="optionsRadios2" id="detailradio-51"
-											value="option51" checked="" type="radio"> 스릴
+											value="스릴" type="radio"> 스릴
+
 										</label>
 								</div>
 								<div class="radio radio-primary2">
 										<label> <input name="optionsRadios2" id="detailradio-52"
-											value="option52" checked="" type="radio"> 소름
+											value="소름" type="radio"> 소름
+
 										</label>
 								</div>
 								<div class="radio radio-primary2">
 										<label> <input name="optionsRadios2" id="detailradio-53"
-											value="option53" checked="" type="radio"> 긴장
+											value="긴장" type="radio"> 긴장
 										</label>
 								</div>
 								<div class="radio radio-primary2">
 										<label> <input name="optionsRadios2" id="detailradio-54"
-											value="option54" checked="" type="radio"> 반전
+											value="반전" type="radio"> 반전
+
 										</label>
 								</div>
 								<div class="radio radio-primary2">
 										<label> <input name="optionsRadios2" id="detailradio-55"
-											value="option55" checked="" type="radio"> 호러
+
+											value="호러"  type="radio"> 호러
+
 										</label>
 								</div>
 								<div class="radio radio-primary2">
 										<label> <input name="optionsRadios2" id="detailradio-56"
-											value="option56" checked="" type="radio"> 충격
+											value="충격"  type="radio"> 충격
 										</label>
 								</div>
 								<div class="radio radio-primary2">
 										<label> <input name="optionsRadios2" id="detailradio-57"
-											value="option57" checked="" type="radio"> 귀신
+											value="귀신"  type="radio"> 귀신
 										</label>
 								</div>
 							</div>
@@ -312,44 +316,45 @@
 							<div class="centrado6" style="display: none">
 								<div class="radio radio-primary2">
 										<label> <input name="optionsRadios2" id="detailradio-61"
-											value="option61" checked="" type="radio"> 할리우드
+											value="할리우드"  type="radio"> 할리우드
 										</label>
 								</div>
 								<div class="radio radio-primary2">
 										<label> <input name="optionsRadios2" id="detailradio-62"
-											value="option62" checked="" type="radio"> 대박
+											value="대박"  type="radio"> 대박
 										</label>
 								</div>
 								<div class="radio radio-primary2">
 										<label> <input name="optionsRadios2" id="detailradio-63"
-											value="option63" checked="" type="radio"> 감탄
+											value="감탄"  type="radio"> 감탄
 										</label>
 								</div>
 								<div class="radio radio-primary2">
 										<label> <input name="optionsRadios2" id="detailradio-64"
-											value="option64" checked="" type="radio"> 연기력
+											value="연기력"  type="radio"> 연기력
 										</label>
 								</div>
 								<div class="radio radio-primary2">
 										<label> <input name="optionsRadios2" id="detailradio-65"
-											value="option65" checked="" type="radio"> 모험
+											value="모험" type="radio"> 모험
 										</label>
 								</div>
 								<div class="radio radio-primary2">
 										<label> <input name="optionsRadios2" id="detailradio-66"
-											value="option66" checked="" type="radio"> 범죄
+											value="범죄"  type="radio"> 범죄
 										</label>
 								</div>
 								<div class="radio radio-primary2">
 										<label> <input name="optionsRadios2" id="detailradio-67"
-											value="option67" checked="" type="radio"> 스펙타클
+											value="스펙타클"  type="radio"> 스펙타클
 										</label>
 								</div>
 							</div>
 						</div>
 								<div class="btn-total">
-									<input type="button" value="검색" id="btn-keep">	
+									<input type="submit" value="검색" id="btn-keep">	
 								</div>
+							</form>
 							</section> </section>
 						
 					</div>

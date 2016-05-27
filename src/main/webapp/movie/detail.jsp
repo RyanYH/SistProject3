@@ -75,4 +75,5 @@
 <script src='http://cdn.rawgit.com/trazyn/neoui-ng/master/dist/neoui-0.1.0+std.min.js'></script>
 <script src="js/detail.js"></script>
 </body>
+
 </html>
