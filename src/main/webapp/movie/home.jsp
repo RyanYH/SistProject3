@@ -374,15 +374,20 @@
 				<div class="small_block recipe" style="width: 620px;">
 
 					<div class="recipe_container">
+					<form action="detail.do" method="post">
 						<h2> 신성규의 오늘의 영화 추천</h2>
-						<p id="ssgRecommand">${todayRec}</p>
+						<img src="${todayVO.poster}">
+						<p id="ssgRecommand">${todayVO.title}</p>
+						<p>${todayVO.playdate} | ${todayVO.rating} | ${todayVO.grade} </p>
+						<input type="hidden" name="no" value="${todayVO.no}"/>
 						<!-- <input type="text" placeholder="http://www.cgv.co.kr/"
 							class="food_input" />
 						<div class="check_container">
 							<input id="evidence" type="checkbox" checked="checked"
 								class="check_box" />
 						</div> -->
-						<button class="food_cta">상세보기</button>
+						<button type="submit" id="goToDetail" class="food_cta">상세보기</button>
+					</form>
 					</div>
 				</div>
 				<!-- <div class="small_block">
