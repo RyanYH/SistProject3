@@ -1,11 +1,12 @@
-#chartdiv {
-	width		: 100%;
-	height		: 435px;
-	font-size	: 11px;
-}						
+@import url("http://fonts.googleapis.com/earlyaccess/hanna.css");
+
 html{
 	color: #aaa;
 }
+body{
+	background-color: aliceblue;
+}
+
 
 #rate {
 	padding: 0;
@@ -29,13 +30,16 @@ html{
     top: 885px;
 }
 .newsli {
-  position: relative;
-  overflow: hidden;
-  background: #ffffff;
-  margin: 0 5px 1em 5px;
-  padding: 1em;
-  cursor: pointer;
-   box-shadow: 0 1px 24px rgba(0, 0, 0, .24), 0 5px #ddd, 0 9px 6px -3px #999;
+    position: relative;
+    top: -710px;
+    left: 60%;
+    width: 75%;
+    overflow: hidden;
+    background: #ffffff;
+    margin: 0 5px 1em 5px;
+    padding: 1em;
+    
+    box-shadow: 0 1px 24px rgba(0, 0, 0, .24), 0 5px #ddd, 0 9px 6px -3px #999;
 }
 .newsli img {
     -webkit-transition: all 0.25s linear;
@@ -45,6 +49,53 @@ html{
     width: 95px;
     height: 55px;
 }
+
+
+
+
+
+
+#top-bar {
+    background-color: #383f42;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80px;
+    z-index: 999;
+}
+
+#small-logo {
+    font-family: hanna;
+    font-weight: 400;
+    font-size: 22px;
+    letter-spacing: 1em;
+    color: white;
+    line-height: 60px;
+    margin-left: 20px;
+    position: absolute;
+    left: 40%;
+    top: 8px;
+}
+#small-logo2 {
+    font-family: sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    letter-spacing: 1em;
+    color: white;
+    line-height: 60px;
+    margin-left: 20px;
+    position: absolute;
+    left: 150px;
+    top: 0;
+}
+
+
+
+
+
+
+
 
 #menu, #profile {
 	min-width: 300px
@@ -272,7 +323,7 @@ xmp {
 	display: block;
 	padding-left: 340px;
 	padding-top: 75pt;
-	font-family: Roboto, "Microsoft YaHei", "微软雅黑", STXihei, "华文细黑", serif;
+	
 	font-size: 9pt;
 	color: rgba(0, 0, 0, .65)
 }
@@ -293,8 +344,7 @@ xmp {
 
 #accordion .note, #accordion xmp {
 	display: block;
-	font-family: Georgia, "Times New Roman", "Microsoft YaHei", "微软雅黑",
-		STXihei, "华文细黑", serif;
+
 	font-size: 9pt;
 	color: rgba(0, 0, 0, .55)
 }
@@ -449,7 +499,7 @@ xmp {
 	display: block;
 	padding-left: 340px;
 	padding-top: 75pt;
-	font-family: Roboto, "Microsoft YaHei", "微软雅黑", STXihei, "华文细黑", serif;
+	
 	font-size: 9pt;
 	color: rgba(0, 0, 0, .65)
 }
@@ -474,8 +524,7 @@ xmp {
 
 #autoComplete .note, #autoComplete xmp {
 	display: block;
-	font-family: Georgia, "Times New Roman", "Microsoft YaHei", "微软雅黑",
-		STXihei, "华文细黑", serif;
+	
 	font-size: 9pt;
 	color: rgba(0, 0, 0, .55)
 }
@@ -659,7 +708,7 @@ xmp {
 	display: block;
 	padding-left: 340px;
 	padding-top: 75pt;
-	font-family: Roboto, "Microsoft YaHei", "微软雅黑", STXihei, "华文细黑", serif;
+	
 	font-size: 9pt;
 	color: rgba(0, 0, 0, .65)
 }
@@ -684,8 +733,7 @@ xmp {
 
 #buttons .note, #buttons xmp {
 	display: block;
-	font-family: Georgia, "Times New Roman", "Microsoft YaHei", "微软雅黑",
-		STXihei, "华文细黑", serif;
+	
 	font-size: 9pt;
 	color: rgba(0, 0, 0, .55)
 }
@@ -844,7 +892,7 @@ xmp {
 	display: block;
 	padding-left: 340px;
 	padding-top: 75pt;
-	font-family: Roboto, "Microsoft YaHei", "微软雅黑", STXihei, "华文细黑", serif;
+	
 	font-size: 9pt;
 	color: rgba(0, 0, 0, .65)
 }
@@ -869,8 +917,7 @@ xmp {
 
 #calendar .note, #calendar xmp {
 	display: block;
-	font-family: Georgia, "Times New Roman", "Microsoft YaHei", "微软雅黑",
-		STXihei, "华文细黑", serif;
+	
 	font-size: 9pt;
 	color: rgba(0, 0, 0, .55)
 }
@@ -1048,7 +1095,7 @@ xmp {
 	display: block;
 	padding-left: 340px;
 	padding-top: 75pt;
-	font-family: Roboto, "Microsoft YaHei", "微软雅黑", STXihei, "华文细黑", serif;
+	
 	font-size: 9pt;
 	color: rgba(0, 0, 0, .65)
 }
@@ -1073,8 +1120,7 @@ xmp {
 
 #checkbox .note, #checkbox xmp {
 	display: block;
-	font-family: Georgia, "Times New Roman", "Microsoft YaHei", "微软雅黑",
-		STXihei, "华文细黑", serif;
+
 	font-size: 9pt;
 	color: rgba(0, 0, 0, .55)
 }
@@ -1441,7 +1487,7 @@ xmp {
 	display: block;
 	padding-left: 340px;
 	padding-top: 75pt;
-	font-family: Roboto, "Microsoft YaHei", "微软雅黑", STXihei, "华文细黑", serif;
+	
 	font-size: 9pt;
 	color: rgba(0, 0, 0, .65)
 }
@@ -1465,8 +1511,7 @@ xmp {
 
 #dateutil .note, #dateutil xmp {
 	display: block;
-	font-family: Georgia, "Times New Roman", "Microsoft YaHei", "微软雅黑",
-		STXihei, "华文细黑", serif;
+
 	font-size: 9pt;
 	color: rgba(0, 0, 0, .55)
 }
@@ -1621,7 +1666,7 @@ xmp {
 	display: block;
 	padding-left: 340px;
 	padding-top: 75pt;
-	font-family: Roboto, "Microsoft YaHei", "微软雅黑", STXihei, "华文细黑", serif;
+	
 	font-size: 9pt;
 	color: rgba(0, 0, 0, .65)
 }
@@ -1648,8 +1693,7 @@ xmp {
 
 #dropdown .note, #dropdown xmp {
 	display: block;
-	font-family: Georgia, "Times New Roman", "Microsoft YaHei", "微软雅黑",
-		STXihei, "华文细黑", serif;
+
 	font-size: 9pt;
 	color: rgba(0, 0, 0, .55)
 }
@@ -2014,7 +2058,7 @@ xmp {
 	display: block;
 	padding-left: 340px;
 	padding-top: 75pt;
-	font-family: Roboto, "Microsoft YaHei", "微软雅黑", STXihei, "华文细黑", serif;
+
 	font-size: 9pt;
 	color: rgba(0, 0, 0, .65)
 }
@@ -2048,8 +2092,7 @@ xmp {
 
 #getstarted.markdown .note, #getstarted.markdown xmp {
 	display: block;
-	font-family: Georgia, "Times New Roman", "Microsoft YaHei", "微软雅黑",
-		STXihei, "华文细黑", serif;
+
 	font-size: 9pt;
 	color: rgba(0, 0, 0, .55)
 }
@@ -2301,8 +2344,7 @@ xmp {
 #loading xmp {
 	display: block;
 	margin: 30px 0 0;
-	font-family: Georgia, "Times New Roman", "Microsoft YaHei", "微软雅黑",
-		STXihei, "华文细黑", serif;
+	
 	font-size: 14px;
 	color: rgba(0, 0, 0, .55);
 	background-color: #fff
@@ -2519,7 +2561,7 @@ xmp {
 	display: block;
 	padding-left: 340px;
 	padding-top: 75pt;
-	font-family: Roboto, "Microsoft YaHei", "微软雅黑", STXihei, "华文细黑", serif;
+
 	font-size: 9pt;
 	color: rgba(0, 0, 0, .65)
 }
@@ -2546,8 +2588,7 @@ xmp {
 
 #message .note, #message xmp {
 	display: block;
-	font-family: Georgia, "Times New Roman", "Microsoft YaHei", "微软雅黑",
-		STXihei, "华文细黑", serif;
+	
 	font-size: 9pt;
 	color: rgba(0, 0, 0, .55)
 }
@@ -2726,7 +2767,7 @@ xmp {
 	display: block;
 	padding-left: 340px;
 	padding-top: 75pt;
-	font-family: Roboto, "Microsoft YaHei", "微软雅黑", STXihei, "华文细黑", serif;
+
 	font-size: 9pt;
 	color: rgba(0, 0, 0, .65)
 }
@@ -2751,8 +2792,7 @@ xmp {
 
 #modal .note, #modal xmp {
 	display: block;
-	font-family: Georgia, "Times New Roman", "Microsoft YaHei", "微软雅黑",
-		STXihei, "华文细黑", serif;
+
 	font-size: 9pt;
 	color: rgba(0, 0, 0, .55)
 }
@@ -2917,7 +2957,7 @@ xmp {
 	display: block;
 	padding-left: 340px;
 	padding-top: 75pt;
-	font-family: Roboto, "Microsoft YaHei", "微软雅黑", STXihei, "华文细黑", serif;
+
 	font-size: 9pt;
 	color: rgba(0, 0, 0, .65)
 }
@@ -2938,8 +2978,7 @@ xmp {
 
 #pagination .note, #pagination xmp {
 	display: block;
-	font-family: Georgia, "Times New Roman", "Microsoft YaHei", "微软雅黑",
-		STXihei, "华文细黑", serif;
+
 	font-size: 9pt;
 	color: rgba(0, 0, 0, .55)
 }
@@ -3141,8 +3180,7 @@ xmp {
 #progress xmp {
 	display: block;
 	margin: 30px 0 0;
-	font-family: Georgia, "Times New Roman", "Microsoft YaHei", "微软雅黑",
-		STXihei, "华文细黑", serif;
+
 	font-size: 14px;
 	color: rgba(0, 0, 0, .55);
 	background-color: #fff;
@@ -3433,7 +3471,7 @@ xmp {
 	display: block;
 	padding-left: 340px;
 	padding-top: 75pt;
-	font-family: Roboto, "Microsoft YaHei", "微软雅黑", STXihei, "华文细黑", serif;
+
 	font-size: 9pt;
 	color: rgba(0, 0, 0, .65)
 }
@@ -3456,8 +3494,6 @@ xmp {
 
 #radio .note, #radio xmp {
 	display: block;
-	font-family: Georgia, "Times New Roman", "Microsoft YaHei", "微软雅黑",
-		STXihei, "华文细黑", serif;
 	font-size: 9pt;
 	color: rgba(0, 0, 0, .55)
 }
@@ -3620,7 +3656,6 @@ xmp {
 	display: block;
 	padding-left: 340px;
 	padding-top: 75pt;
-	font-family: Roboto, "Microsoft YaHei", "微软雅黑", STXihei, "华文细黑", serif;
 	font-size: 9pt;
 	color: rgba(0, 0, 0, .65)
 }
@@ -3645,8 +3680,7 @@ xmp {
 
 #rate .note, #rate xmp {
 	display: block;
-	font-family: Georgia, "Times New Roman", "Microsoft YaHei", "微软雅黑",
-		STXihei, "华文细黑", serif;
+
 	font-size: 9pt;
 	color: rgba(0, 0, 0, .55)
 }
@@ -3810,13 +3844,13 @@ xmp {
 }
 
 #rate .movie {
-	position:absolute;
-	left: 28%;
-	width: 900px;
-	margin-top: 75pt;
-	overflow: hidden;
-	box-shadow: 0 1px 24px rgba(0, 0, 0, .24), 0 5px #ddd, 0 9px 6px -3px
-		#999
+    position: absolute;
+    left: 4%;
+    width: 900px;
+    height: 900px;
+    margin-top: 75pt;
+    overflow: hidden;
+    box-shadow: 0 1px 24px rgba(0, 0, 0, .24), 0 5px #ddd, 0 9px 6px -3px #999;
 }
 
 #rate .movie .info .min, #ripple .block.various .box, #ripple .block.various a:hover,
@@ -4195,8 +4229,7 @@ xmp {
 #ripple xmp {
 	display: block;
 	margin: 30px 0 0;
-	font-family: Georgia, "Times New Roman", "Microsoft YaHei", "微软雅黑",
-		STXihei, "华文细黑", serif;
+
 	font-size: 14px;
 	color: rgba(0, 0, 0, .55);
 	background-color: #fff
@@ -4435,7 +4468,7 @@ xmp {
 	display: block;
 	padding-left: 340px;
 	padding-top: 75pt;
-	font-family: Roboto, "Microsoft YaHei", "微软雅黑", STXihei, "华文细黑", serif;
+
 	font-size: 9pt;
 	color: rgba(0, 0, 0, .65)
 }
@@ -4458,8 +4491,7 @@ xmp {
 
 #sidenav .note, #sidenav xmp {
 	display: block;
-	font-family: Georgia, "Times New Roman", "Microsoft YaHei", "微软雅黑",
-		STXihei, "华文细黑", serif;
+
 	font-size: 9pt;
 	color: rgba(0, 0, 0, .55)
 }
@@ -4667,7 +4699,7 @@ xmp {
 	display: block;
 	padding-left: 340px;
 	padding-top: 75pt;
-	font-family: Roboto, "Microsoft YaHei", "微软雅黑", STXihei, "华文细黑", serif;
+
 	font-size: 9pt;
 	color: rgba(0, 0, 0, .65)
 }
@@ -4692,8 +4724,7 @@ xmp {
 
 #switcher .note, #switcher xmp {
 	display: block;
-	font-family: Georgia, "Times New Roman", "Microsoft YaHei", "微软雅黑",
-		STXihei, "华文细黑", serif;
+
 	font-size: 9pt;
 	color: rgba(0, 0, 0, .55)
 }
@@ -4856,7 +4887,7 @@ xmp {
 	display: block;
 	padding-left: 340px;
 	padding-top: 75pt;
-	font-family: Roboto, "Microsoft YaHei", "微软雅黑", STXihei, "华文细黑", serif;
+
 	font-size: 9pt;
 	color: rgba(0, 0, 0, .65)
 }
@@ -4881,8 +4912,7 @@ xmp {
 
 #tab .note, #tab xmp {
 	display: block;
-	font-family: Georgia, "Times New Roman", "Microsoft YaHei", "微软雅黑",
-		STXihei, "华文细黑", serif;
+
 	font-size: 9pt;
 	color: rgba(0, 0, 0, .55)
 }
@@ -5038,7 +5068,7 @@ xmp {
 	display: block;
 	padding-left: 340px;
 	padding-top: 75pt;
-	font-family: Roboto, "Microsoft YaHei", "微软雅黑", STXihei, "华文细黑", serif;
+
 	font-size: 9pt;
 	color: rgba(0, 0, 0, .65)
 }
@@ -5063,8 +5093,7 @@ xmp {
 
 #toast .note, #toast xmp {
 	display: block;
-	font-family: Georgia, "Times New Roman", "Microsoft YaHei", "微软雅黑",
-		STXihei, "华文细黑", serif;
+
 	font-size: 9pt;
 	color: rgba(0, 0, 0, .55)
 }
@@ -5324,7 +5353,7 @@ xmp {
 	display: block;
 	padding-left: 340px;
 	padding-top: 75pt;
-	font-family: Roboto, "Microsoft YaHei", "微软雅黑", STXihei, "华文细黑", serif;
+
 	font-size: 9pt;
 	color: rgba(0, 0, 0, .65)
 }
@@ -5349,8 +5378,7 @@ xmp {
 
 #tooltip .note, #tooltip xmp {
 	display: block;
-	font-family: Georgia, "Times New Roman", "Microsoft YaHei", "微软雅黑",
-		STXihei, "华文细黑", serif;
+
 	font-size: 9pt;
 	color: rgba(0, 0, 0, .55)
 }
@@ -5579,7 +5607,7 @@ xmp {
 	display: block;
 	padding-left: 340px;
 	padding-top: 75pt;
-	font-family: Roboto, "Microsoft YaHei", "微软雅黑", STXihei, "华文细黑", serif;
+
 	font-size: 9pt;
 	color: rgba(0, 0, 0, .65)
 }
@@ -5605,8 +5633,7 @@ xmp {
 
 #tree .note, #tree xmp {
 	display: block;
-	font-family: Georgia, "Times New Roman", "Microsoft YaHei", "微软雅黑",
-		STXihei, "华文细黑", serif;
+
 	font-size: 9pt;
 	color: rgba(0, 0, 0, .55)
 }
@@ -5784,7 +5811,7 @@ xmp {
 	display: block;
 	padding-left: 340px;
 	padding-top: 75pt;
-	font-family: Roboto, "Microsoft YaHei", "微软雅黑", STXihei, "华文细黑", serif;
+
 	font-size: 9pt;
 	color: rgba(0, 0, 0, .65)
 }
@@ -5809,8 +5836,7 @@ xmp {
 
 #validation .note, #validation xmp {
 	display: block;
-	font-family: Georgia, "Times New Roman", "Microsoft YaHei", "微软雅黑",
-		STXihei, "华文细黑", serif;
+
 	font-size: 9pt;
 	color: rgba(0, 0, 0, .55)
 }
@@ -6093,3 +6119,8 @@ xmp {
 	background-color: #039be5;
 	color: #fff
 }
+#chartdiv {
+	width		: 100%;
+	height		: 435px;
+	font-size	: 11px;
+}						

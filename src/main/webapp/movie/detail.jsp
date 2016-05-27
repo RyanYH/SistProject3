@@ -75,6 +75,10 @@ jQuery('.chart-input').off().on('input change',function() {
 </script>
 </head>
 <body>
+<div id="top-bar">
+		<div id="small-logo">상세 정보</div>
+	</div>
+
 	<div id="rate" ng-app="demo.rate" ng-controller="rateController">
 		<div class="movie center-block">
 			<div class="cover">
@@ -155,9 +159,12 @@ jQuery('.chart-input').off().on('input change',function() {
 
 	</div>
 
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> refs/remotes/origin/master
 <script src='http://cdn.rawgit.com/trazyn/neoui-ng/master/dist/vendor.min.js'></script>
 <script src='http://cdn.rawgit.com/trazyn/neoui-ng/master/dist/neoui-0.1.0+std.min.js'></script>
 <script src="js/detail.js"></script>

@@ -6,6 +6,8 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Insert title here</title>
 <link rel="stylesheet" href="css/list.css">
+<link rel='stylesheet prefetch'
+	href='http://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css'>
 <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
 <script type="text/javascript">
 $(function(){
@@ -16,6 +18,12 @@ $(function(){
 </script>
 </head>
 <body>
+	<div id="top-bar">
+		<div id="small-logo">검색 결과</div>
+	</div>
+
+	
+	
 	<ul id="portfolio-list">
 	  <c:forEach var="vo" items="${list}">
 		<li class="item video">
@@ -74,6 +82,8 @@ $(function(){
 		</c:forEach>
 	</ul>
 
+	
+	
 
 	<script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
 	<script src="js/list.js"></script>
