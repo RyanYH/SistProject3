@@ -113,6 +113,10 @@ public class MainController {
 					play = play.substring(0,4);
 				}
 				
+				if (play.contains("-")){
+					play = play.substring(0,4);
+				}
+				
 				if (Integer.parseInt(play) > 1970){
 					data3 = data3 + "["+play+","+vo.getGrade()+"],";
 				}
