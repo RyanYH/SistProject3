@@ -52,6 +52,8 @@ body{
     float: right;
     width: 85px;
     height: 17px;
+    top: 125px;
+    left: -320px;
     display: inline-block;
     position: relative;
 }
@@ -235,13 +237,13 @@ body{
     font-family: 'Hanna';
     position: absolute;
     left: 170px;
-    top: 65px;
+    top: 80px;
 }
 #rat {
     font-family: 'Hanna';
     position: absolute;
     left: 170px;
-    top: 88px;
+    top: 105px;
 }
 #total {
     font-family: 'Hanna';
@@ -250,12 +252,17 @@ body{
     top: 112px;
 }
 #grade {
-	font-family: 'Hanna';
+    font-family: 'Hanna';
     position: absolute;
-    left: 170px;
+    left: 260px;
     top: 136px;
 }
-
+#director {
+    font-family: 'Hanna';
+    position: absolute;
+    left: 169px;
+    top: 58px;
+}
 
 
 #top-bar {
