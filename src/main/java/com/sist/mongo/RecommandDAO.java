@@ -29,7 +29,59 @@ public class RecommandDAO {
 			 while(cursor.hasNext()){
 				 BasicDBObject obj=(BasicDBObject)cursor.next();
 				 RecommandVO vo=new RecommandVO();
-
+				 
+				 vo.setNo(obj.getInt("no"));
+				 vo.setTitle(obj.getString("title"));
+				 vo.setActor(obj.getString("actor"));
+				 vo.setCount(obj.getString("count"));
+				 vo.setDirector(obj.getString("director"));
+				 vo.setFeel(obj.getString("feel"));
+				 vo.setGenre(obj.getString("genre"));
+				 vo.setGrade(obj.getDouble("grade"));
+				 vo.setPlaydate(obj.getString("playdate"));
+				 vo.setPoster(obj.getString("poster"));
+				 vo.setRating(obj.getString("rating"));
+				 vo.setSynopsis(obj.getString("synopsis"));
+				 vo.setTime(obj.getString("time"));
+				 vo.setGradeCount(obj.getInt("gradecount"));
+				 
+				 list.add(vo);
+			 }
+			 cursor.close();
+		 }catch(Exception ex){
+			 System.out.println(ex.getMessage());
+		 }
+		 return list;
+	 }
+	 
+	 public List<RecommandVO> recommandTop10Data() {
+		 List<RecommandVO> list = new ArrayList<RecommandVO>();
+		 try{
+			 BasicDBObject orderBy=new BasicDBObject();
+			 orderBy.clear();
+			 orderBy.put("grade", -1);
+			 
+			 DBCursor cursor=dbc.find().sort(orderBy);
+			 
+			 while(cursor.hasNext()){
+				 BasicDBObject obj=(BasicDBObject)cursor.next();
+				 RecommandVO vo=new RecommandVO();
+				 
+				 vo.setNo(obj.getInt("no"));
+				 vo.setTitle(obj.getString("title"));
+				 vo.setActor(obj.getString("actor"));
+				 vo.setCount(obj.getString("count"));
+				 vo.setDirector(obj.getString("director"));
+				 vo.setFeel(obj.getString("feel"));
+				 vo.setGenre(obj.getString("genre"));
+				 vo.setGrade(obj.getDouble("grade"));
+				 vo.setPlaydate(obj.getString("playdate"));
+				 vo.setPoster(obj.getString("poster"));
+				 vo.setRating(obj.getString("rating"));
+				 vo.setSynopsis(obj.getString("synopsis"));
+				 vo.setTime(obj.getString("time"));
+				 vo.setGradeCount(obj.getInt("gradecount"));
+				 
 				 list.add(vo);
 			 }
 			 cursor.close();
