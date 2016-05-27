@@ -12,7 +12,9 @@
 
 @import url(http://fonts.googleapis.com/css?family=Lobster+Two:400,700);
 
-
+body{
+	background-image: url(https://unsplash.it/1920/1080?image=737);
+}
 .rating {
   direction: rtl;
   font-size: 17px;
@@ -130,6 +132,7 @@
     position: absolute;
     top: 7px;
     left: 17px;
+    width: 150px;
 }
 .filter {
   width: 17%;
@@ -156,6 +159,7 @@
   opacity: 0;
 }
 .item {
+  top: 100px;
   width: 30%;
   height: 200px;
   float: left;
@@ -251,3 +255,45 @@
     left: 170px;
     top: 136px;
 }
+
+
+
+#top-bar {
+    background-color: #383f42;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80px;
+    z-index: 999;
+}
+
+#small-logo {
+    font-family: hanna;
+    font-weight: 400;
+    font-size: 22px;
+    letter-spacing: 1em;
+    color: white;
+    line-height: 60px;
+    margin-left: 20px;
+    position: absolute;
+    left: 40%;
+    top: 8px;
+}
+#small-logo2 {
+    font-family: sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    letter-spacing: 1em;
+    color: white;
+    line-height: 60px;
+    margin-left: 20px;
+    position: absolute;
+    left: 150px;
+    top: 0;
+}
+
+
+
+
+
