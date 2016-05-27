@@ -153,6 +153,24 @@ public class RecommandDAO {
 			}
 			return list;
 		}
+		public RecommandVO todayRecommand(String title){
+			RecommandVO vo = new RecommandVO();
+			 try{
+				 BasicDBObject where = new BasicDBObject();
+				 where.put("title", title);
+				 BasicDBObject res = (BasicDBObject)dbc.findOne(where);
+				 vo.setNo(res.getInt("no"));
+				 vo.setTitle(res.getString("title"));
+				 vo.setPoster(res.getString("poster"));
+				 vo.setPlaydate(res.getString("playdate"));
+				 vo.setGenre(res.getString("genre"));
+				 vo.setGrade(res.getDouble("grade"));
+				 
+			 }catch(Exception ex){
+				 ex.printStackTrace();
+			 }
+			 return vo;
+		}
 }
 
 

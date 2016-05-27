@@ -34,7 +34,8 @@ public class MainController {
 			}
 			
 		}
-		model.addAttribute("todayRec",todayRecommand);
+		RecommandVO todayVO = rdao.todayRecommand(todayRecommand);
+		model.addAttribute("todayVO",todayVO);
 		model.addAttribute("boxOffice",boxList);
 		return "movie/home";
 	}
@@ -57,9 +58,25 @@ public class MainController {
 	@RequestMapping("detail.do")
 	public String detail(int no,Model model){
 		System.out.println(no);
-		
+		String[] color={"#FF0F00","#FF6600","#FF9E01","#FCD202","#F8FF01","#B0DE09","#04D215","#0D8ECF","#0D52D1"
+				,"#2A0CD0","#8A0CCF","#CD0D74","#754DEB","#DDDDDD","#999999","#333333","#000000"};
+		int colorCnt=0;
 		RecommandVO vo = rdao.detailAllData(no);
 		model.addAttribute("vo",vo);
+		StringTokenizer stf = new StringTokenizer(vo.getFeel(), ",");
+		StringTokenizer stc = new StringTokenizer(vo.getCount(), ",");
+		String chart="[";
+		while(stf.hasMoreTokens()){
+			if(colorCnt>16){
+				colorCnt=0;
+			}
+			chart+="{'감성':'"+stf.nextToken()+"','숫자':"+stc.nextToken()+",'color':'"+color[colorCnt]+"'},";
+			colorCnt++;
+		}
+		chart = chart.substring(0,chart.lastIndexOf(','));
+		chart+="],";
+		model.addAttribute("chart",chart);
+		System.out.println(chart);
 		return "movie/detail";
 	}
 	
