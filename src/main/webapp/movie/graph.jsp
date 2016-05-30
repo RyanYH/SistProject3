@@ -15,7 +15,7 @@
 <link rel="stylesheet" href="css/wrapper.css">
 <link rel="stylesheet" href="css/radio.css">
 <link rel="stylesheet" href="css/search.css">
- 
+ <link rel="stylesheet" href="css/graph.css">
 <script src="http://code.jquery.com/jquery.js"></script>
 <script src="https://code.highcharts.com/highcharts.js"></script>
 <script src="https://code.highcharts.com/modules/exporting.js"></script>
