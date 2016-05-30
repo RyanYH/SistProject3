@@ -176,11 +176,12 @@ $(function () {
 		<tr>
 			<td>
 				<a href="home.do">홈으로</a>
-			</td>	
+			</td>	 
 		</tr>
 	</table>
 
 	</div>
+	
 <footer role="contentinfo" class="footer">&copy; 2016 Movie Magazine</footer>
 
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
@@ -189,6 +190,4 @@ $(function () {
 
 </body>
 
-</html>
-</body>
 </html>

@@ -153,36 +153,76 @@ public class MainController {
 		return "movie/graph";
 
 	}
+
 	@RequestMapping("detail.do")
-	public String detail(int no,Model model){
-		String[] color={"#FF0F00","#FF6600","#FF9E01","#FCD202","#F8FF01","#B0DE09","#04D215","#0D8ECF","#0D52D1"
-				,"#2A0CD0","#8A0CCF","#CD0D74","#754DEB","#DDDDDD","#999999","#333333","#000000"};
-		int colorCnt=0;
-		RecommandVO vo = rdao.detailAllData(no);
-		model.addAttribute("vo",vo);
-		if(vo.getFeel()!=null){
-			StringTokenizer stf = new StringTokenizer(vo.getFeel(), ",");
-			StringTokenizer stc = new StringTokenizer(vo.getCount(), ",");
-			String chart="[";
-			while(stf.hasMoreTokens()){
-				String temp = stc.nextToken();
-				int tmp = Integer.parseInt(temp);
-				if(tmp>70)
-					tmp=70;
-				if(tmp<10)
-					tmp=tmp+7;
-				chart+="{'감성':'"+stf.nextToken()+"','숫자':"+tmp+",'color':'"+color[colorCnt]+"'},";
-				colorCnt++;
-				if(colorCnt>15){
-					colorCnt=0;
-				}
-			}
-			chart = chart.substring(0,chart.lastIndexOf(','));
-			chart+="],";
-			model.addAttribute("chart",chart);
-		}
-		return "movie/detail";
-	}
+    public String detail(int no,Model model){
+        String[] color={"#FF0F00","#FF6600","#FF9E01","#FCD202","#F8FF01","#B0DE09","#04D215","#0D8ECF","#0D52D1"
+                ,"#2A0CD0","#8A0CCF","#CD0D74","#754DEB","#DDDDDD","#999999","#333333","#000000"};
+        int colorCnt=0;
+        RecommandVO vo = rdao.detailAllData(no);
+        model.addAttribute("vo",vo);
+        if(vo.getFeel()!=null){
+            StringTokenizer stf = new StringTokenizer(vo.getFeel(), ",");
+            StringTokenizer stc = new StringTokenizer(vo.getCount(), ",");
+            String chart="[";
+            while(stf.hasMoreTokens()){
+                String temp = stc.nextToken();
+                int tmp = Integer.parseInt(temp);
+                if(tmp>70)
+                    tmp=70;
+                if(tmp<10)
+                    tmp=tmp+7;
+                chart+="{'감성':'"+stf.nextToken()+"','숫자':"+tmp+",'color':'"+color[colorCnt]+"'},";
+                colorCnt++;
+                if(colorCnt>15){
+                    colorCnt=0;
+                }
+            }
+            chart = chart.substring(0,chart.lastIndexOf(','));
+            chart+="],";
+            model.addAttribute("chart",chart);
+        }
+       
+        String genre = vo.getGenre();
+        if (genre.contains(",")){
+            StringTokenizer st1 = new StringTokenizer(genre, ",");
+            genre = st1.nextToken().trim();
+        }
+       
+        if (genre.contains("/")){
+            StringTokenizer st1 = new StringTokenizer(genre, "/");
+            genre = st1.nextToken().trim();
+        }
+       
+        List<RecommandVO> genlist = new ArrayList<RecommandVO>();
+        genlist = rdao.recommandGenreData(genre);
+        List<RecommandVO> genrelist = new ArrayList<RecommandVO>();
+       
+        for(int i = 0; i < genlist.size(); i++){
+            RecommandVO a = genlist.get(i);
+            for(int j = 0; j < i; j++){
+                RecommandVO b = genlist.get(j);
+               
+                if (a.getTitle().equals(b.getTitle())){
+                    genlist.remove(j);
+                    break;
+                }
+            }
+        }
+       
+        for(int i = 0; i < genlist.size(); i++){
+            RecommandVO temp = genlist.get(i);
+            double grade = temp.getGrade();
+           
+            if(!(genlist.get(i).getTitle().equals(vo.getTitle())) && grade <= 9.90 && temp.getGradeCount() > 300){               
+                genrelist.add(temp);
+            }
+        }
+       
+        model.addAttribute("genlist",genrelist);
+       
+        return "movie/detail";
+    } 
 	
 	@RequestMapping("movieCheck.do")
 	public String movieCheck(Model model,String optionsRadios,String optionsRadios2){
@@ -229,11 +269,15 @@ public class MainController {
 			chartTitle = chartTitle.substring(0,chartTitle.lastIndexOf(","));
 			pieChart = pieChart.substring(0,pieChart.lastIndexOf(","));
 			pieChart += "],";
+			
+			int di = list.size() % 3;
+			
 			model.addAttribute("pieChart",pieChart);
 			model.addAttribute("chartFeel",optionsRadios2);
 			model.addAttribute("chartTitle",chartTitle);
 			model.addAttribute("chartCount",chartCount);
 			model.addAttribute("list",list);
+			model.addAttribute("di",di);
 		}
 		return "movie/list";
 	}

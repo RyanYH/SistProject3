@@ -15,6 +15,9 @@ $(function(){
 	$(".listFrm").click(function(){
 		$(this).submit();
 	});
+	$("#linkHomeBtn").click(function(){
+		 location.href="home.do";
+	});
 });
 
 </script>
@@ -22,10 +25,11 @@ $(function(){
 <body>
 	<div id="top-bar">
 		<div id="small-logo">검색 결과</div>
+		<button value="home" id="linkHomeBtn">Home</button>
 	</div>
 
 	
-	
+	<div>
 	<ul id="portfolio-list">
 	  <c:if test="${list!=null}">
 	  <c:forEach var="vo" items="${list}">
@@ -83,9 +87,28 @@ $(function(){
 			</form>
 			</div>
 		</li>
-		
 		</c:forEach>
 		
+		<c:if test="${di == 1 }">
+			<li class="item video">
+				<div class="item-body">
+					<div class="item-image"></div>
+				</div>
+			</li>
+			<li class="item video">
+				<div class="item-body">
+					<div class="item-image"></div>
+				</div>
+			</li>
+		</c:if>
+		
+		<c:if test="${di == 2 }">
+			<li class="item video">
+				<div class="item-body">
+					<div class="item-image"></div>
+				</div>
+			</li>
+		</c:if>
 		</c:if>
 		<c:if test="${list==null}">
 			<li class="item video">
@@ -98,7 +121,7 @@ $(function(){
 			</li>
 		</c:if>
 	</ul>
-	
+	</div>
    
 	<script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
 	<script src="js/list.js"></script>

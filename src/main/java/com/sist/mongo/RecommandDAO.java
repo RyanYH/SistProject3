@@ -54,6 +54,45 @@ public class RecommandDAO {
 		 return list;
 	 }
 	 
+	 public List<RecommandVO> recommandGenreData(String genre) {
+		 List<RecommandVO> list = new ArrayList<RecommandVO>();
+		 try{
+			 BasicDBObject where = new BasicDBObject();
+			 where.put("genre",  java.util.regex.Pattern.compile(genre));
+			 
+			 BasicDBObject orderBy=new BasicDBObject();
+			 orderBy.clear();
+			 orderBy.put("grade", -1);
+			 
+			 DBCursor cursor=dbc.find(where).sort(orderBy);
+			 while(cursor.hasNext()){
+				 BasicDBObject obj=(BasicDBObject)cursor.next();
+				 RecommandVO vo=new RecommandVO();
+				 
+				 vo.setNo(obj.getInt("no"));
+				 vo.setTitle(obj.getString("title"));
+				 vo.setActor(obj.getString("actor"));
+				 vo.setCount(obj.getString("count"));
+				 vo.setDirector(obj.getString("director"));
+				 vo.setFeel(obj.getString("feel"));
+				 vo.setGenre(obj.getString("genre"));
+				 vo.setGrade(obj.getDouble("grade"));
+				 vo.setPlaydate(obj.getString("playdate"));
+				 vo.setPoster(obj.getString("poster"));
+				 vo.setRating(obj.getString("rating"));
+				 vo.setSynopsis(obj.getString("synopsis"));
+				 vo.setTime(obj.getString("time"));
+				 vo.setGradeCount(obj.getInt("gradecount"));
+				 
+				 list.add(vo);
+			 }
+			 cursor.close();
+		 }catch(Exception ex){
+			 System.out.println(ex.getMessage());
+		 }
+		 return list;
+	 }
+	 
 	 public List<RecommandVO> recommandTop10Data() {
 		 List<RecommandVO> list = new ArrayList<RecommandVO>();
 		 try{
@@ -96,7 +135,7 @@ public class RecommandDAO {
 		 BasicDBObject where = new BasicDBObject();
 		 where.put("title",  java.util.regex.Pattern.compile(title));
 		 
-		 DBCursor cursor = dbc.find(where).sort(new BasicDBObject("gradecount",-1).append("grade", -1)).skip(1).limit(20);;
+		 DBCursor cursor = dbc.find(where).sort(new BasicDBObject("gradecount",-1).append("grade", -1)).skip(1).limit(21);
 		 while(cursor.hasNext()){
 			 BasicDBObject obj = (BasicDBObject)cursor.next();
 			 RecommandVO vo = new RecommandVO();
@@ -179,7 +218,7 @@ public class RecommandDAO {
 				BasicDBObject qq = new BasicDBObject();
 				q.put("genre", java.util.regex.Pattern.compile(genre));
 				q.put("feel", java.util.regex.Pattern.compile(feel));
-				DBCursor cursor = dbc.find(q).sort(new BasicDBObject("gradecount",-1).append("grade", -1)).skip(1).limit(20);
+				DBCursor cursor = dbc.find(q).sort(new BasicDBObject("gradecount",-1).append("grade", -1)).skip(1).limit(21);
 				while(cursor.hasNext()){
 					BasicDBObject obj = (BasicDBObject)cursor.next();
 				   RecommandVO vo=new  RecommandVO();

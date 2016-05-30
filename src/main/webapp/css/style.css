@@ -547,7 +547,7 @@ body {
 }
 .medium_block.peas .block_content h2 {
   font-size: 40px;
-  color: #fff;
+  color: tomato;
   margin-top: 0;
   margin-bottom: 7px;
 }
@@ -560,7 +560,7 @@ body {
   font-family: 'Old Standard TT', serif;
 }
 .medium_block.peas .block_content .food_cta {
-  background-color: #3e67c9;
+  background-color: tomato;
   font-size: 13px;
   padding: 9px 24px;
   margin-top: 17px;
@@ -651,9 +651,11 @@ body {
   margin: 10px auto 25px auto;
 }
 .small_block.recipe .food_cta {
-  background-color: #65d8b9;
-  padding: 9px 23px;
-  font-size: 12px;
+    background-color: #65d8b9;
+    padding: 9px 23px;
+    font-size: 12px;
+    position: relative;
+    top: -90px;
 }
 .food_input {
   width: 70%;
@@ -1117,10 +1119,13 @@ textarea {
 	font-family: 'hanna';
 	color: white;
 }
-#ssgRecommand{
-	font-size: 20px;
-	color :teal;
-	font-family: 'hanna';
+#ssgRecommand {
+    font-size: 33px;
+    color: wheat;
+    font-family: 'hanna';
+    position: relative;
+    top: -112px;
+    left: 36px;
 }
 #shinposter{
     vertical-align: middle;
@@ -1131,10 +1136,13 @@ textarea {
 }
 #shin {
     position: relative;
-    top: 25px;
+    top: 32px;
+    font-family: hanna;
+    font-size: 36px;
 }
 #shinday {
     position: relative;
-    top: -75px;
+    top: -105px;
+    font-family: hanna;
     color: antiquewhite;
 }

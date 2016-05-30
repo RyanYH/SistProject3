@@ -42,8 +42,8 @@
 			style="background-image: url('https://images.unsplash.com/photo-1458053688450-eef5d21d43b3?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&s=8d815ef30a5abbb17a9f634bc58c5e6e')"
 			class="big_block">
 			<div class="block_content">
-				<h2>A Modern Twist on a Classic</h2>
-				<h4>Eggs with avocado and salsa in a soft corn tortilla</h4>
+				<h2>Movie on FreshQ</h2>
+				<h4>A Modern Twist on a Movie by FreshQ</h4>
 				<form class="search" action="searchTitle.do" method="post">
 					<input type="search" placeholder="Search here..." required id="searchTextInput" name="title">
 					<button type="submit" id="searchTextBtn">Search</button>
@@ -71,7 +71,7 @@
 								<!-- Radio button por defecto ********-->
 								<div class="radio radio-primary">
 									<label> <input name="optionsRadios" id="optionsRadios1"
-										value="드라마"  type="radio"> 드라마
+										value="드라마"  type="radio" checked="checked"> 드라마
 									</label>
 								</div>
 								<!-- Radio button de color ***********-->
@@ -385,7 +385,7 @@
 							<input id="evidence" type="checkbox" checked="checked"
 								class="check_box" />
 						</div> -->
-						<button type="submit" id="goToDetail" class="food_cta">상세보기</button>
+						<button type="submit" id="goToDetail" class="food_cta">Read More</button>
 					</form>
 					</div>
 				</div>

@@ -1,26 +1,35 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE>
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Insert title here</title>
-<link rel='stylesheet prefetch' href='http://cdn.rawgit.com/trazyn/neoui-ng/master/dist/neoui-0.1.0.min.css'>
-<link rel='stylesheet prefetch' href='http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css'>
-<link rel="stylesheet" href="css/detail.css">
-<script type="text/javascript" src="http://www.amcharts.com/lib/3/amcharts.js"></script>
-<script type="text/javascript" src="http://www.amcharts.com/lib/3/serial.js"></script>
-<script type="text/javascript" src="http://www.amcharts.com/lib/3/themes/none.js"></script>
+<link rel='stylesheet prefetch'
+	href='http://cdn.rawgit.com/trazyn/neoui-ng/master/dist/neoui-0.1.0.min.css'>
+<link rel='stylesheet prefetch'
+	href='http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css'>
+<script type="text/javascript"
+	src="http://www.amcharts.com/lib/3/amcharts.js"></script>
+<script type="text/javascript"
+	src="http://www.amcharts.com/lib/3/serial.js"></script>
+<script type="text/javascript"
+	src="http://www.amcharts.com/lib/3/themes/none.js"></script>
 <script src='https://code.jquery.com/jquery-1.11.2.min.js'></script>
+<link rel="stylesheet" href="css/detail.css">
 <script type="text/javascript">
+$(function(){
+	 	$("#linkHomeBtn").click(function(){
+	 		location.href="home.do";
+	 	})
+});
 var chart = AmCharts.makeChart("chartdiv", {
     "theme": "none",
     "type": "serial",
 	"startDuration": 2,
     "dataProvider": 
-    	<%= request.getAttribute("chart")
-    	
-    	%>
+    	<%=request.getAttribute("chart")%>
     
     "valueAxes": [{
         "position": "left",
@@ -76,8 +85,9 @@ jQuery('.chart-input').off().on('input change',function() {
 </script>
 </head>
 <body>
-<div id="top-bar">
+	<div id="top-bar">
 		<div id="small-logo">상세 정보</div>
+		<button value="home" id="linkHomeBtn">Home</button>
 	</div>
 
 	<div id="rate" ng-app="demo.rate" ng-controller="rateController">
@@ -88,12 +98,13 @@ jQuery('.chart-input').off().on('input change',function() {
 						src="https://images.unsplash.com/photo-1429595518497-e7e060d84f7d?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&s=833be352b819594acd95b997fe6a4693">
 
 					<div class="meta">
-						<p class="subhead">${vo.title} </p>
+						<p class="subhead">${vo.title}</p>
 						<p>
 							<span>${vo.rating}</span> <span>${vo.time}</span> <span>${vo.grade}</span>
 						</p>
 						<s-rate ng-model="rate" ng-init="rate = ${vo.grade/2}"></s-rate>
-						<span> <i class="md-icon-favorite"></i> ${vo.gradeCount} likes
+						<span> <i class="md-icon-favorite"></i> ${vo.gradeCount}
+							likes
 						</span>
 					</div>
 				</div>
@@ -101,9 +112,7 @@ jQuery('.chart-input').off().on('input change',function() {
 			<div class="info">
 				<div class="preview">
 					<div class="min">
-						<img
-							src="${vo.poster}">
-
+						<img src="${vo.poster}">
 					</div>
 				</div>
 
@@ -114,62 +123,46 @@ jQuery('.chart-input').off().on('input change',function() {
 					<p class="stars">
 						<b>배우:</b> ${vo.actor}
 					</p>
+					<p class="stars">
+						<b>장르:</b> ${vo.genre}
+					</p>
 					<p>${vo.synopsis}</p>
-
-					<!-- <p class="writers">
-						<b>극본:</b> <a href="//www.imdb.com/name/nm0634300/?ref_=tt_ov_wr">Jonathan
-							Nolan</a>, <a href="//www.imdb.com/name/nm0634240/?ref_=tt_ov_wr">Christopher
-							Nolan</a>
-					</p> -->
-							
-					<!-- <div class="action">
-						<button class="md-btn md-btn-mint">
-							<i class="md-icon-add"></i> Watchlist
-						</button>
-
-						<button class="md-btn md-btn-coral">Watch Trailer</button>
-					</div> -->
 				</div>
 			</div>
 		</div>
 		<div class="content-back">
+		<h2 class="tex">감성 분포 그래프</h2>
+		
 			<ul id="newsul">
-				<li class="newsli">
-					
-					<c:if test="${chart!=null}">
-					<div id="chartdiv"></div>
-					</c:if>
-					<c:if test="${chart==null}">
+				<li class="newsli"><c:if test="${chart!=null}">
+						<div id="chartdiv"></div>
+					</c:if> <c:if test="${chart==null}">
 						<div id="chartxx">영화에 대한 평가가 없습니다</div>
-					</c:if>
-					<!-- <div class="container-fluid">
-					  <div class="row text-center" style="overflow:hidden;">
-							<div class="col-sm-3" style="float: none !important;display: inline-block;">
-								<label class="text-left">Top Radius:</label>
-								<input class="chart-input" data-property="topRadius" type="range" min="0" max="1.5" value="1" step="0.01" />
-							</div>
-					
-							<div class="col-sm-3" style="float: none !important;display: inline-block;">
-								<label class="text-left">Angle:</label>
-								<input class="chart-input" data-property="angle" type="range" min="0" max="89" value="30" step="1" />	
-							</div>
-					
-							<div class="col-sm-3" style="float: none !important;display: inline-block;">
-								<label class="text-left">Depth:</label>
-								<input class="chart-input" data-property="depth3D" type="range" min="1" max="120" value="40" step="1" />
-							</div>
-						</div>
-					</div> -->
-					
-				</li>
+					</c:if></li>
 			</ul>
+			<ul id="recom">
+			<h2 class="tex1">장르 추천 영화</h2>
+			<c:forEach items="${genlist }" var="gen" begin="0" end="2">
+				<li class="recomlist">
+					<p>
+						<a href="detail.do?no=${gen.no }"><img src="${gen.poster }"></a>
+					</p>
+					<p>${gen.title }</p>
+					<p>${gen.grade }</p>
+				</li>
+			</c:forEach>
+		</ul>
 		</div>
-
 	</div>
+	<!-- <div id="recom">
+		
+	</div> -->
 
-<script src='http://cdn.rawgit.com/trazyn/neoui-ng/master/dist/vendor.min.js'></script>
-<script src='http://cdn.rawgit.com/trazyn/neoui-ng/master/dist/neoui-0.1.0+std.min.js'></script>
-<script src="js/detail.js"></script>
+	<script
+		src='http://cdn.rawgit.com/trazyn/neoui-ng/master/dist/vendor.min.js'></script>
+	<script
+		src='http://cdn.rawgit.com/trazyn/neoui-ng/master/dist/neoui-0.1.0+std.min.js'></script>
+	<script src="js/detail.js"></script>
 </body>
 
 </html>

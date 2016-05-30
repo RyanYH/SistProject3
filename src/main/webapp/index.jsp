@@ -2,4 +2,3 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <c:redirect url="home.do"/>
 
-<!-- 신과 같은 재정 찬양  -->
