@@ -72,6 +72,7 @@ jQuery('.chart-input').off().on('input change',function() {
 	target[property] = this.value;
 	chart.validateNow();
 });
+
 </script>
 </head>
 <body>
@@ -91,8 +92,8 @@ jQuery('.chart-input').off().on('input change',function() {
 						<p>
 							<span>${vo.rating}</span> <span>${vo.time}</span> <span>${vo.grade}</span>
 						</p>
-						<s-rate ng-model="rate" ng-init="rate = 4.4"></s-rate>
-						<span> <i class="md-icon-favorite"></i> 740,216 likes
+						<s-rate ng-model="rate" ng-init="rate = ${vo.grade/2}"></s-rate>
+						<span> <i class="md-icon-favorite"></i> ${vo.gradeCount} likes
 						</span>
 					</div>
 				</div>
@@ -134,8 +135,14 @@ jQuery('.chart-input').off().on('input change',function() {
 		<div class="content-back">
 			<ul id="newsul">
 				<li class="newsli">
+					
+					<c:if test="${chart!=null}">
 					<div id="chartdiv"></div>
-					<div class="container-fluid">
+					</c:if>
+					<c:if test="${chart==null}">
+						<div id="chartxx">영화에 대한 평가가 없습니다</div>
+					</c:if>
+					<!-- <div class="container-fluid">
 					  <div class="row text-center" style="overflow:hidden;">
 							<div class="col-sm-3" style="float: none !important;display: inline-block;">
 								<label class="text-left">Top Radius:</label>
@@ -152,13 +159,13 @@ jQuery('.chart-input').off().on('input change',function() {
 								<input class="chart-input" data-property="depth3D" type="range" min="1" max="120" value="40" step="1" />
 							</div>
 						</div>
-					</div>
+					</div> -->
+					
 				</li>
 			</ul>
 		</div>
 
 	</div>
-
 
 <script src='http://cdn.rawgit.com/trazyn/neoui-ng/master/dist/vendor.min.js'></script>
 <script src='http://cdn.rawgit.com/trazyn/neoui-ng/master/dist/neoui-0.1.0+std.min.js'></script>

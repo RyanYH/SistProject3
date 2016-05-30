@@ -102,7 +102,7 @@ public class MovieManager {
 				desc += naverReview + "\n";
 			}
 		    FileWriter fw = new FileWriter(
-					"/home/sist/bigdataStudy/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/BookTilesProject/desc.txt",
+					"/home/sist/bigdataStudy/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/SistProject3/desc.txt",
 					true);
 			fw.write(desc);
 			fw.close();
@@ -144,7 +144,7 @@ public class MovieManager {
 			// System.out.println(desc);
 
 			FileWriter fw = new FileWriter(
-					"/home/sist/bigdataStudy/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/BookTilesProject/desc.txt",
+					"/home/sist/bigdataStudy/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/SistProject3/desc.txt",
 					true);
 			fw.write(desc);
 			fw.close();
@@ -159,7 +159,7 @@ public class MovieManager {
 			
 			RConnection rc = new RConnection();
 			rc.voidEval(
-					"review<-read.table(\"/home/sist/bigdataStudy/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/BookTilesProject/output/part-r-00000\")");
+					"review<-read.table(\"/home/sist/bigdataStudy/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/SistProject3/output/part-r-00000\")");
 			/*
 			 * rc.voidEval(
 			 * "png(\"/home/sist/bigdataStudy/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/MovieProject/recommand.png\",width=800,height=600)"
@@ -196,7 +196,7 @@ public class MovieManager {
 			RConnection rc = new RConnection();
 			rc.setStringEncoding("utf8");
 			rc.voidEval(
-					"review<-readLines(\"/home/sist/bigdataStudy/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/BookTilesProject/desc.txt\")");
+					"review<-readLines(\"/home/sist/bigdataStudy/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/SistProject3/desc.txt\")");
 			REXP p = rc.eval("review");
 			String[] data = p.asStrings();
 			for (String s : data) {

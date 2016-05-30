@@ -39,7 +39,7 @@ public class MovieDataManager {
 				Element selem=sElem.get(i);
 				String img=ielem.attr("src");
 				MovieDTO d=new MovieDTO();
-				d.setNo(i+1);
+				d.setNo(i);
 				d.setTitle(telem.text());
 				d.setImage(img);
 				int like=Integer.parseInt(lelem.text().replace(",", ""));

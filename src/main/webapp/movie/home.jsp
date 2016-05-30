@@ -372,13 +372,12 @@
 					</div>
 				</div>
 				<div class="small_block recipe" style="width: 620px;">
-
 					<div class="recipe_container">
 					<form action="detail.do" method="post">
-						<h2> 신성규의 오늘의 영화 추천</h2>
-						<img src="${todayVO.poster}">
+						<h2 id="shin"> 오늘의 영화 추천</h2>
+						<img id="shinposter"src="${todayVO.poster}">
 						<p id="ssgRecommand">${todayVO.title}</p>
-						<p>${todayVO.playdate} | ${todayVO.rating} | ${todayVO.grade} </p>
+						<p id="shinday">${todayVO.playdate} | ${todayVO.genre} | ${todayVO.grade} </p>
 						<input type="hidden" name="no" value="${todayVO.no}"/>
 						<!-- <input type="text" placeholder="http://www.cgv.co.kr/"
 							class="food_input" />
@@ -392,7 +391,6 @@
 				</div>
 				<!-- <div class="small_block">
                <div class="small_block_container">
-                  
                </div>
             </div> -->
 			</div>
@@ -401,13 +399,12 @@
 			<div class="last_half" style="background-image: url('https://images.unsplash.com/photo-1416163026265-0bc340a710e4?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&s=0f7fc2012b23b81301ef98d179fbb603')">
 			<h3 id="boxoffice">Box Office</h3>
 			<c:forEach var="box" items="${boxOffice}">
-				<div class="boxDiv">
-					<img src="${box.image}" width=100 height=150 border=0>
-					<p>${box.title}</p>
-					<font color="red"> 예매율 &nbsp;</font>${box.percent}
-					<p>♥${box.like }</p>
-					
-				</div>
+					<div class="boxDiv">
+						<a href="searchMovie.do?title=${box.title }"><img src="${box.image}" width=100 height=150 border=0></a>
+						<p>${box.title}</p>
+						<font color="red"> 예매율 &nbsp;</font>${box.percent}
+						<p>♥${box.like }</p>
+					</div>
 			</c:forEach>
 			</div>
 		</div>

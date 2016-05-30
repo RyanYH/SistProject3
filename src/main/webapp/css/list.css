@@ -1,19 +1,9 @@
 @import url("http://fonts.googleapis.com/earlyaccess/hanna.css");
 
-
-
-
-
-
-
-
-
-
-
 @import url(http://fonts.googleapis.com/css?family=Lobster+Two:400,700);
 
 body{
-	background-image: url(https://unsplash.it/1920/1080?image=737);
+ 	background-image: url(https://unsplash.it/1920/1080?image=737); 
 }
 .rating {
   direction: rtl;
@@ -53,7 +43,7 @@ body{
     width: 85px;
     height: 17px;
     top: 125px;
-    left: -320px;
+    left: -355px;
     display: inline-block;
     position: relative;
 }
@@ -108,18 +98,6 @@ body{
 .ratings.fourhalf:after {
   content: "\f005\f005\f005\f005\f089";
 }
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 #filter-options,
@@ -300,7 +278,29 @@ body{
     top: 0;
 }
 
-
-
-
-
+canvas {
+    display: block;
+    max-width: 800px;
+    margin: 60px auto;
+    background-color: white;
+    position: relative;
+    top: 120px;
+    left: -600px;
+}
+#chartdiv {
+    width: 900px;
+    height: 800px;
+    font-size: 11px;
+    background-color: white;
+    position: relative;
+    top: -740px;
+    left: 1025px;
+}
+	width		: 900px;
+	height		: 500px;
+	font-size	: 11px;
+}	
+	width		: 900px;
+	height		: 435px;
+	font-size	: 11px;
+}	

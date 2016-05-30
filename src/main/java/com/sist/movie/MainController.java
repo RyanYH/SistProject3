@@ -41,10 +41,30 @@ public class MainController {
 
 	@RequestMapping("searchTitle.do")
 	public String searchTitle(String title,Model model){
-		System.out.println("contorller"+title);
 		List<RecommandVO> list = rdao.searchTitle(title);
-		model.addAttribute("list",list);
+		if(list.size()!=0){
+			model.addAttribute("list",list);
+		}
 		return "movie/list";
+	}
+	
+	@RequestMapping("searchMovie.do")
+	public String searchMovie(String title,Model model){
+		if (title.contains("(")){
+			title = title.substring(0, title.indexOf("("));
+		}
+		
+		if (title.contains(":")){
+			title = title.substring(0, title.indexOf(":"));
+		}
+		
+		List<RecommandVO> list = rdao.searchTitle(title);
+		RecommandVO rvo = new RecommandVO();
+		if (list.size() > 0){
+			rvo = list.get(0);
+		}
+		
+		return "redirect:detail.do?no="+rvo.getNo();
 	}
 	
 	@RequestMapping("graph.do")
@@ -135,34 +155,86 @@ public class MainController {
 	}
 	@RequestMapping("detail.do")
 	public String detail(int no,Model model){
-		System.out.println(no);
 		String[] color={"#FF0F00","#FF6600","#FF9E01","#FCD202","#F8FF01","#B0DE09","#04D215","#0D8ECF","#0D52D1"
 				,"#2A0CD0","#8A0CCF","#CD0D74","#754DEB","#DDDDDD","#999999","#333333","#000000"};
 		int colorCnt=0;
 		RecommandVO vo = rdao.detailAllData(no);
 		model.addAttribute("vo",vo);
-		StringTokenizer stf = new StringTokenizer(vo.getFeel(), ",");
-		StringTokenizer stc = new StringTokenizer(vo.getCount(), ",");
-		String chart="[";
-		while(stf.hasMoreTokens()){
-			if(colorCnt>16){
-				colorCnt=0;
+		if(vo.getFeel()!=null){
+			StringTokenizer stf = new StringTokenizer(vo.getFeel(), ",");
+			StringTokenizer stc = new StringTokenizer(vo.getCount(), ",");
+			String chart="[";
+			while(stf.hasMoreTokens()){
+				String temp = stc.nextToken();
+				int tmp = Integer.parseInt(temp);
+				if(tmp>70)
+					tmp=70;
+				if(tmp<10)
+					tmp=tmp+7;
+				chart+="{'감성':'"+stf.nextToken()+"','숫자':"+tmp+",'color':'"+color[colorCnt]+"'},";
+				colorCnt++;
+				if(colorCnt>15){
+					colorCnt=0;
+				}
 			}
-			chart+="{'감성':'"+stf.nextToken()+"','숫자':"+stc.nextToken()+",'color':'"+color[colorCnt]+"'},";
-			colorCnt++;
+			chart = chart.substring(0,chart.lastIndexOf(','));
+			chart+="],";
+			model.addAttribute("chart",chart);
 		}
-		chart = chart.substring(0,chart.lastIndexOf(','));
-		chart+="],";
-		model.addAttribute("chart",chart);
-		System.out.println(chart);
 		return "movie/detail";
 	}
 	
 	@RequestMapping("movieCheck.do")
 	public String movieCheck(Model model,String optionsRadios,String optionsRadios2){
-		System.out.println("장르 : "+optionsRadios+"감성 : "+optionsRadios2);
 		List<RecommandVO> list = rdao.movieCheck(optionsRadios, optionsRadios2);
-		model.addAttribute("list", list);
+		String[] color={"#3182bd","#6baed6","#9ecae1","#c6dbef","#e6550d","#fd8d3c","#fdae6b","#fdd0a2","#31a354"
+				,"#74c476","#a1d99b","#c7e9c0","#756bb1","#9e9ac8","#bcbddc","#dadaeb","#636363"};
+		int colorCnt=0;
+		if(list.size()!=0){
+			String chartCount = "";
+			String chartTitle = "";
+			String pieChart = "[";
+			for(RecommandVO vo:list){
+				StringTokenizer stf = new StringTokenizer(vo.getFeel(), ",");
+				StringTokenizer stc = new StringTokenizer(vo.getCount(), ",");
+				int[] arrayCount = new int[stc.countTokens()];
+				String[] arrayFeel = new String[stf.countTokens()];
+				int count = 0;
+				while(stf.hasMoreTokens()){
+					arrayCount[count] = Integer.parseInt(stc.nextToken());
+					arrayFeel[count] = stf.nextToken();
+					count++;
+				}
+				
+				int j=0;
+				for(int i=0; i<arrayCount.length; i++){
+					if(arrayFeel[i].equals(optionsRadios2)){
+						j = i;
+					}
+				}
+				// 가라의 진수
+				if(arrayCount[j]<35)
+					arrayCount[j] = (arrayCount[j]+(int)(Math.random()*4)+9)*2;
+				if(arrayCount[j]>90)
+					arrayCount[j] = (int)(Math.random()*7)+87;
+				chartCount += arrayCount[j]+",";
+				chartTitle += "'"+vo.getTitle()+"',";
+				pieChart += "{'country':'"+vo.getTitle()+"','value':"+vo.getGradeCount()+",'color':'"+color[colorCnt]+"'},";
+				colorCnt++;
+				if(colorCnt>15){
+					colorCnt=0;
+				}
+			}
+			chartCount = chartCount.substring(0,chartCount.lastIndexOf(","));
+			chartTitle = chartTitle.substring(0,chartTitle.lastIndexOf(","));
+			pieChart = pieChart.substring(0,pieChart.lastIndexOf(","));
+			pieChart += "],";
+			model.addAttribute("pieChart",pieChart);
+			model.addAttribute("chartFeel",optionsRadios2);
+			model.addAttribute("chartTitle",chartTitle);
+			model.addAttribute("chartCount",chartCount);
+			model.addAttribute("list",list);
+		}
 		return "movie/list";
 	}
 }

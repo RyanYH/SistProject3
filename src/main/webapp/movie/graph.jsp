@@ -172,7 +172,13 @@ $(function () {
 		<div class="big_block">
 			<div id="container3" style="width: width:80%; height: 400px;"></div>
 		</div>
-
+	<table style="float:right">
+		<tr>
+			<td>
+				<a href="home.do">홈으로</a>
+			</td>	
+		</tr>
+	</table>
 
 	</div>
 <footer role="contentinfo" class="footer">&copy; 2016 Movie Magazine</footer>

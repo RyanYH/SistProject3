@@ -27,8 +27,8 @@ public class MovieDriver {
 			job.setOutputKeyClass(Text.class);
 			job.setOutputValueClass(IntWritable.class);
 			
-			FileInputFormat.addInputPath(job, new Path("/home/sist/bigdataStudy/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/BookTilesProject/desc.txt"));
-			File dir=new File("/home/sist/bigdataStudy/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/BookTilesProject/output");
+			FileInputFormat.addInputPath(job, new Path("/home/sist/bigdataStudy/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/SistProject3/desc.txt"));
+			File dir=new File("/home/sist/bigdataStudy/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/SistProject3/output");
 			if(dir.exists()) {
 				File[] files=dir.listFiles();
 				for(File f:files) {
@@ -36,7 +36,7 @@ public class MovieDriver {
 				}
 				dir.delete();
 			}
-			FileOutputFormat.setOutputPath(job, new Path("/home/sist/bigdataStudy/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/BookTilesProject/output"));
+			FileOutputFormat.setOutputPath(job, new Path("/home/sist/bigdataStudy/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/SistProject3/output"));
 			
 			MovieManager m=new MovieManager();
 			job.waitForCompletion(true);			

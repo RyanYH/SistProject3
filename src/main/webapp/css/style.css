@@ -1122,3 +1122,19 @@ textarea {
 	color :teal;
 	font-family: 'hanna';
 }
+#shinposter{
+    vertical-align: middle;
+    width: 115px;
+    position: relative;
+    left: -180px;
+    top: 36px;
+}
+#shin {
+    position: relative;
+    top: 25px;
+}
+#shinday {
+    position: relative;
+    top: -75px;
+    color: antiquewhite;
+}
