@@ -172,9 +172,16 @@ $(function () {
 		<div class="big_block">
 			<div id="container3" style="width: width:80%; height: 400px;"></div>
 		</div>
-
+	<table style="float:right">
+		<tr>
+			<td>
+				<a href="home.do">목록으로</a>
+			</td>
+		</tr>
+	</table>
 
 	</div>
+	
 <footer role="contentinfo" class="footer">&copy; 2016 Movie Magazine</footer>
 
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
